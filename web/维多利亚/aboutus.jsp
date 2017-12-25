@@ -55,11 +55,11 @@
                     <p>
                         订阅<span class="fabric">Victoria’s Secret</span>电子资讯
                     </p>
-                    <form action="https://www.victoriassecretcn.com/subscribe.php" method="post">
+                    <form action="注册订阅.jsp" method="post">
                         <fieldset>
-          <span class="vs-input-text">
-            <input type="email" name="email" id="vableew" placeholder="邮箱">
-          </span>
+                          <span class="vs-input-text">
+                            <input type="email" name="email" id="vableew" placeholder="邮箱">
+                          </span>
                             <button type="submit">
                                 <img alt="维多利亚的秘密订阅" src="img/homeInputArrow.png">
                                 <span class="vs-offscreen">Sign Up</span>

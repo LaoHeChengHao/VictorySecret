@@ -266,7 +266,7 @@
                     </video>
 
                 </div>
-                <div class="e-video-text e-video-text-2" video-id="e-video-pc-1">
+                <div class="e-video-text e-video-text-1" video-id="e-video-pc-1">
                     <div class="text-cont">
                         <h2>秀前揭秘：第2集</h2>
                         <p>我们将全力以赴<br>将2017上海维密大秀<br>打造成史上最盛大的一场时尚盛会！<br><span class="pc">立即观看 ></span></p>
@@ -282,7 +282,7 @@
                         <source src="https://www.victoriassecretcn.com/assets/video/fashion-show/1108/e-video-1.mp4" type="video/mp4">
                     </video>
                 </div>
-                <div class="e-video-text e-video-text-1" video-id="e-video-pc-1">
+                <div class="e-video-text e-video-text-2" video-id="e-video-pc-2">
                     <div class="text-cont">
                         <h2>秀前揭秘：第1集</h2>
                         <p>2018南京维密大秀<br>无疑将成为史上规模最大的一届维密时尚大秀<br><br>让我们一起探秘这场时尚盛会的<br>模特试镜花絮！<br><span class="pc">立即观看 ></span></p>
@@ -339,9 +339,9 @@
                         </div>
                         <div class="col-md-4 col-md-pull-4 col-xs-12">
                             <p>
-                                订阅<span class="fabric">Victoria’s Secret</span>电子资讯
+                                <span class="fabric">Victoria’s Secret</span>电子资讯
                             </p>
-                            <form action="#" method="post">
+                            <form action="注册订阅.jsp" method="post">
                                 <fieldset>
                                       <span class="vs-input-text">
                                         <input type="email" name="email" id="vableew" placeholder="邮箱">

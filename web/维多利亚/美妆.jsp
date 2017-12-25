@@ -47,7 +47,7 @@
                         <a  href="#">门店位置</a>
                     </li>
                     <li>
-                        <a  href="#">维密秀</a>
+                        <a  href="维密SHOW.jsp">维密秀</a>
                     </li>
                 </ul>
             </nav>

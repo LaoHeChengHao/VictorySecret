@@ -42,10 +42,10 @@
                         <a  href="注册订阅.jsp">订阅</a>
                     </li>
                     <li>
-                        <a  href="location.php">门店位置</a>
+                        <a  href="#">门店位置</a>
                     </li>
                     <li>
-                        <a  href="fashion-show.php">维密秀</a>
+                        <a  href="维密SHOW.jsp">维密秀</a>
                     </li>
                 </ul>
             </nav>
@@ -200,11 +200,9 @@
         </footer>
     </div>
 </div>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
 <script src="js/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
-<!-- <script src="assets/js/stickUp.min.js"></script> -->
 <script src="js/globe.js"></script>
 <script src="js/ga.js"></script>
 <script src="js/setForm.js"></script>

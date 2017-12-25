@@ -104,7 +104,7 @@
                                 订阅<span class="fabric">Victoria’s Secret</span>电子资讯
                             </p>
                             <!--暂时提交到注册界面，后期需要验证填写邮箱地址-->
-                            <form action="#" method="post">
+                            <form action="注册订阅.jsp" method="post">
                                 <fieldset>
                                       <span class="vs-input-text">
                                         <input type="email" name="email" id="vableew" placeholder="邮箱">
