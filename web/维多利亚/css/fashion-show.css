@@ -1,0 +1,880 @@
+h2 {
+    font-size: 21px;
+    font-weight: bold;
+    font-family: 'BentonSans-Book',sans-serif;
+    text-transform: Uppercase;
+    line-height: 24px;
+}
+p {
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'BentonSans-Book',sans-serif;
+}
+p span {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 14px;
+}
+img {
+    width: 100%;
+}
+.vs-logo img {
+    width: 294px;
+}
+.fashion-show-wrap {
+    text-align: center;
+}
+
+.video-wrap {
+    position: relative;
+    background: #000;
+    margin-bottom: 70px;
+}
+
+.video-wrap-bg img{
+    width: 100%;
+}
+
+.video-col3 {
+    position: absolute;
+    top: 15%;
+    left: 74%;
+    width: 15%;
+}
+.video-col1 {
+    position: absolute;
+    width: 14%;
+    top: 58%;
+    left: 10%;
+}
+.video-new-text {
+    position: absolute;
+    width: 22%;
+    top: 50%;
+    left: 6%;
+    color: #fff;
+}
+.video-cont {
+    margin-bottom: 50px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+.video-cont p {
+    padding-top: 10px;
+    font-size: 12px;
+}
+.casting-img {
+    margin-bottom: 100px;
+}
+.casting-img img {
+    width: 100%;
+    margin-top: 130px;
+}
+
+
+.wrapHide {
+    overflow: hidden;
+}
+
+.fashion-show-kv {
+    position: relative;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fashion-show-kv.zoom {
+    background-position: 100% 170%;
+}
+
+/* .fashion-show-video:before {
+  content: ' ';
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(../i/fashion-show/videoBg.jpg) center 0 no-repeat;
+  background-size: cover;
+} */
+
+
+.kv-title {
+    position: absolute;
+    width: 28%;
+    left: 36%;
+    top: 32%;
+}
+
+.fashion-show-kv video {
+    position: relative;
+    width: 100%;
+    top: 0;
+}
+.fashion-show-kv .icon-play {
+    position: absolute;
+    z-index: 1;
+    width: 20%;
+    left: 40%;
+    top: 25%;
+    display: none;
+    z-index: 2;
+}
+
+.fashion-show-kv .icon-play img {
+    width: 100%;
+}
+
+.fashion-show-video-img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.weibo-wrap {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.weibo-wrap, .fashion-show-video2, .img-wrap {
+    text-align: center;
+    padding: 0 10px;
+    padding: 70px 0 30px;
+    background: #fff;
+    padding-top: 10px;
+}
+.weibo-wrap3 {
+    padding: 0;
+    margin-top: -40px;
+    margin-bottom: 40px;
+}
+.weibo-wrap3 h2 {
+    margin-top: -10px;
+}
+.weibo-wrap3 .swiper-container {
+    transform: scale(0.9);
+}
+.fashion-show-video2 {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    height: 350px;
+}
+
+.fashion-show-video2 .videoBg {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.fashion-show-video2 .videoBg .videoImg {
+    width: 100%;
+}
+.fashion-show-video2 .videoBg .videoImg.pc {
+    position: relative;
+    width: 66.6%;
+    float: left;
+}
+.fashion-show-video2 .videoBg .videoImg-text {
+    width: 33.3%;
+    float: left;
+    margin-top: 55px;
+    padding-left: 20px;
+}
+
+
+.img-wrap {
+    position: relative;
+    padding-bottom: 10px;
+}
+.img-wrap .pc-text {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    text-align: center;
+    width: 33%;
+}
+
+.weibo-wrap p {
+    margin-bottom: 15px;
+}
+
+.weibo-wrap3 p {
+    margin-bottom: 15px;
+}
+
+.weibo-swiper {
+    height: 135px;
+}
+.swiper-button-prev, .swiper-button-next {
+    top: 55%;
+    width: 33px;
+    height: 54px;
+    background: url(../img/arrow.jpg);
+}
+.swiper-button-prev {
+    transform: rotate(180deg);
+    left: -33px;
+}
+.swiper-button-next {
+    right: -33px;
+}
+
+.weibo-wrap3 .weibo-swiper .swiper-slide {
+    width: 507px;
+    height: 507px;
+}
+.weibo-swiper .swiper-slide {
+
+}
+.weibo-swiper .swiper-slide:hover {
+    //border: 1px solid #ccc;
+}
+.weibo-swiper .swiper-slide:hover .mouseover-slide {
+    display: block;
+}
+
+.weibo-swiper .swiper-slide img{
+    width: 100%;
+    height: 100%;
+}
+.weibo-swiper .swiper-slide .img-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: top center;
+    background-size: cover;
+}
+.weibo-swiper .swiper-slide .mouseover-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    display: none;
+    border: 1px solid #ccc;
+}
+
+.video-wrap-small {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 11px 8px;
+}
+.ww-wrap {
+    margin-bottom: 40px;
+}
+.ww-box {
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    background-image: url(../img/boxBg.jpg);
+}
+
+
+.video-wrap-small {
+    width: 980px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+
+.video-wrap-small {
+    background: #fff;
+    color: #000;
+    margin-bottom: 20px;
+}
+.ww-cont {
+    position: relative;
+    background: #000;
+    padding: 10px;
+}
+
+.weibo-icon {
+    display: inline-block;
+    width: 20px;
+    margin: 0 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.weibo-icon {
+    width: 30px;
+    margin: 15px 10px;
+}
+.wechat-icon img, .weibo-icon img {
+    width: 100%;
+}
+
+.wechat-show {
+    position: absolute;
+    width: 180px;
+    top: 0%;
+    left: 50%;
+    margin: -90px;
+    display: none;
+}
+
+.wechat-show img {
+    width: 100%;
+}
+
+.videoBg img, .img-wrap img {
+    width: 100%;
+}
+
+.videoBg {
+    position: relative;
+}
+
+.videoBg video {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+.videoBg video.show {
+    opacity: 1
+}
+.videoBg img {
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+.videoBg img.opacityHide {
+    opacity: 0;
+    z-index: 0;
+}
+
+.img-wrap p {
+    margin: 15px 0;
+}
+
+
+::-webkit-input-placeholder {
+    color: #000;
+    opacity: .5;
+}
+
+.pic-wrap {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 100%;
+    background: #fff;
+    opacity: 0;
+    transition: all 1s ease .03s;
+    z-index: 9999;
+    display: none;
+}
+
+.pic-wrap.show {
+    left: 0;
+    opacity: 1;
+}
+
+.pic-cont.mob {
+    margin-top: 50px;
+}
+.pic-img {
+    width: 100%;
+}
+
+.head-cont {
+    margin: 10px 0;
+}
+
+.head-cont.pc {
+    margin-bottom: 20px;
+    height: 30px;
+}
+.weibo-wrap3 .head-cont.pc {
+    height: 60px;
+}
+img.head-img.mob {
+    width: 40px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+img.head-img.pc {
+    width: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    float: left;
+    margin-left: 20px;
+}
+.weibo-wrap3 img.head-img.pc {
+    width: 60px;
+}
+
+.user-name {
+    font-size: 12px;
+}
+.user-name.pc {
+    display: inline-block;
+    line-height: 30px;
+}
+.weibo-wrap3 .user-name.pc {
+    line-height: 60px;
+    font-size: 20px;
+}
+.heart {
+    display: inline-block;
+    float: right;
+    margin-top: 7px;
+    margin-right: 30px;
+}
+
+.icon_heart {
+    width: 22px;
+}
+
+.heart-num {
+    position: relative;
+    top: 3px;
+    left: 5px;
+}
+
+.pic-caption.mob {
+    margin: 20px;
+    text-align: left;
+}
+
+.pic-caption.pc {
+    margin: 20px;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 35%;
+    transform: translate(0%, -40%);
+    overflow: hidden;
+}
+.weibo-wrap3 .pic-caption.pc {
+    font-size: 20px;
+}
+.arrow {
+    position: fixed;
+    width: 35px;
+    top: 5px;
+}
+
+.arrow img {
+    width: 100%;
+}
+
+.email-wrap, .email-wrap img {
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+}
+
+.video-play-wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.video-play-wrap video {
+    position: absolute;
+    width: 80%;
+    top: 5%;
+    left: 10%;
+}
+.close {
+    width: 25px;
+    margin-right: 10px;
+    margin-top: 20px;
+    opacity: 1;
+}
+footer {
+    margin-top: 0;
+    background: #fff;
+}
+.text-pc {
+    position: absolute;
+    top: 22%;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+.e-video-wrap {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 70px;
+}
+
+.e-video-text {
+    position: absolute;
+    width: 25%;
+    top: 28.5%;
+    left: 67.5%;
+    cursor: pointer;
+    height: 43%;
+}
+.text-cont {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.e-video-text-1 {
+    top: 27%;
+}
+.e-video-text-4 {
+    left: 68%;
+}
+.e-video {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    display: none;
+}
+.e-video.show {
+    display: block;
+}
+.pic-wrap-2 {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    transition: all 1s ease .03s;
+    z-index: 9999;
+    display: none;
+}
+
+.pic-wrap-2.show {
+    top: 0;
+}
+.i-text {
+    margin: 50px 0;
+}
+.i-wrap {
+    position: relative;
+}
+.i-04 .i-text {
+    position: absolute;
+    width: 30%;
+    left: 66%;
+    top: 68%;
+}
+.i-05 .i-text {
+    position: absolute;
+    width: 100%;
+    top: 75%;
+}
+
+.i-05 {
+    margin-bottom: 100px;
+}
+
+.overflowHidden {
+    overflow: hidden;
+}
+.close-btn {
+    position: fixed;
+    width: 55px;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -22.5px;
+    z-index: 1;
+    cursor: pointer;
+}
+.show-2 {
+    cursor: pointer;
+}
+.video-wrap-2 {
+    color: #fff;
+}
+.video-wrap-2-text {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background: url(../img/video-wrap2-text-bg.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    margin-top: -28px;
+    margin-bottom: 70px;
+}
+.video-wrap-2-text h2 {
+    padding-top: 50px;
+}
+.mob {
+    display: none;
+}
+.pc {
+    display: block;
+}
+.opacityHide {
+    opacity: 0;
+}
+.vs-footerShare img {
+    width: auto;
+}
+.guest {
+    margin-top:70px;
+    margin-bottom: 70px;
+}
+.guest img {
+    width: 700px;
+    margin: 0 auto;
+}
+.guest img.pcnew {
+    width: 1200px;
+}
+.guest img.guest-title {
+    width: 200px;
+    margin-bottom: 20px;
+}
+.guest h2 {
+    letter-spacing: 2px;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+.video-auto, .video-auto video {
+    width: 100%;
+}
+.video-auto-text {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    margin-bottom: 0;
+    padding: 20px 0 22px;
+    margin-top: -2px;
+}
+.video-auto-text a {
+    color: #fff;
+}
+.video-auto-text a:hover {
+    color: #ff3399;
+}
+.jiemi {
+    width: 140px;
+}
+.photo {
+    margin-bottom: 80px;
+}
+.weibo-wrap3-text {
+    margin-top: -25px;
+    margin-bottom: 80px;
+}
+@media (max-width: 768px) {
+    .mob {
+        display: block;
+    }
+    .pc {
+        display: none;
+    }
+    .icon_heart.mob,
+    .heart-num.mob {
+        display: inline-block;
+    }
+    .video-wrap-small {
+        width: 100%;
+        margin-bottom: 50px;
+        margin-top: -15px;
+    }
+    span.heart-num {
+        font-weight: normal;
+    }
+    .user-name.mob {
+        display: inline-block;
+        line-height: 45px;
+        margin-left: -70px;
+    }
+    img.head-img.mob {
+        margin-bottom: 10px;
+        float: left;
+    }
+    h2 {
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 12px;
+    }
+    p span {
+        font-size: 12px;
+    }
+    .kv-title {
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+    .fashion-show-kv {
+        height: auto;
+    }
+    .ww-wrap {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .video-col3 {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #000;
+        opacity: 1;
+        padding-bottom: 50px;
+    }
+    .fashion-show-video2 {
+        height: auto;
+    }
+    .video-cont {
+        width: 94%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .video-cont p {
+        padding-top: 10px;
+    }
+    .video-cont.small {
+        width: 100%;
+        min-height: 110px;
+    }
+    .video-cont.small img {
+        position: relative;
+        width: 47%;
+        float: left;
+        margin-left: 3%;
+    }
+    .video-cont.small p {
+        text-align: left;
+        padding-left: 20px;
+        width: 50%;
+        float: left;
+    }
+    .casting-img img.mob {
+        margin-top: 0;
+    }
+    .casting-img p {
+        padding: 0 10px;
+    }
+    .casting-img,
+    .img-wrap {
+        margin-bottom: 0;
+    }
+    .swiper-button-prev, .swiper-button-next {
+        display: none;
+    }
+    .video-play-wrap {
+        background: rgba(0, 0, 0, 1);
+    }
+    .video-play-wrap video {
+        top: 30%;
+        width: 100%;
+        left: 0;
+    }
+    .weibo-swiper .swiper-slide:hover {
+        border: none;
+    }
+    .weibo-swiper .swiper-slide:hover .mouseover-slide {
+        display: none;
+    }
+    .close {
+        width: 20px;
+    }
+    .e-video-wrap {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .e-video-wrap {
+        width: 100%;
+    }
+    .e-video-text {
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: 0;
+        margin-bottom: 50px;
+    }
+    .destination h2,
+    .destination p {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .e-video {
+        top: 5%;
+    }
+    .i-04 .i-text {
+        position: relative;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    .i-05 .i-text {
+        top: 55%;
+    }
+    .i-05 {
+        margin-bottom: 0;
+    }
+    .close-btn {
+        width: 40px;
+        margin-left: -20px;
+        bottom: 20px;
+    }
+    .guest img {
+        width: 100%;
+    }
+    .video-auto-text {
+        padding: 20px 0 20px;
+    }
+    .guest {
+        margin-bottom: 40px;
+    }
+    .weibo-wrap {
+        padding: 45px 0;
+        padding-top: 60px;
+    }
+    .weibo-wrap3 {
+        margin-bottom: 45px;
+        padding-top: 0;
+    }
+    .photo {
+        margin-top: -5px;
+        margin-bottom: 100px;
+    }
+    .photo-text {
+        margin-bottom: 30px;
+    }
+    .weibo-wrap3-text {
+        margin-top: -20px;
+        margin-bottom: 0px;
+    }
+    .video-wrap-2-text {
+        margin-bottom: 30px;
+    }
+    .video-wrap {
+        margin-bottom: 0;
+    }
+    .text-cont {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin-bottom: 30px;
+    }
+}

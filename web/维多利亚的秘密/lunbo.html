@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>轮播实验</title>
+		<style type="text/css">
+			#div1 {
+				width: 1200px;
+				height: 640px;
+				border: 1px solid gray;
+				margin: 0 auto;
+				position: relative;
+				overflow: hidden;
+			}
+			
+			#div1 img {
+				position: absolute;
+			}
+		</style>
+		<script type="text/javascript">
+			
+			var arr=new Array();
+				arr[0]="下载图片/18370029_980x1200_0.jpg";
+				arr[1]="下载图片/63d0f703918fa0ec7e56fedf2c9759ee3c6ddb4b.jpg";
+				arr[2]="下载图片/9a504fc2d56285352b9a48ca9aef76c6a6ef63e7.jpg";
+				arr[3]="下载图片/a0a3k908338577213596.jpg";
+			var i=0;
+			//轮播移动的函数
+			function imgMove() {
+				var imgs=document.getElementById("picture");
+				imgs.src=arr[i];
+				i++;
+				if (i==4) {
+					i=0;
+					
+				}
+				setTimeout("imgMove()",2000);
+			}
+
+			
+		</script>
+	</head>
+
+	<body onload="imgMove()">
+		<div id="div1">
+			<img src="下载图片/18370029_980x1200_0.jpg" alt="" width="1200" id="picture"/>
+			<!--<img src="下载图片/63d0f703918fa0ec7e56fedf2c9759ee3c6ddb4b.jpg" alt="" width="1200" />
+			<img src="下载图片/9a504fc2d56285352b9a48ca9aef76c6a6ef63e7.jpg" alt="" width="1200" />
+			<img src="下载图片/a0a3k908338577213596.jpg" alt="" width="1200" />-->
+		</div>
+
+	</body>
+
+</html>
