@@ -44,10 +44,10 @@
                         <a  href="注册订阅.jsp">订阅</a>
                     </li>
                     <li>
-                        <a  href="https://www.victoriassecretcn.com/location.php">门店位置</a>
+                        <a  href="#">门店位置</a>
                     </li>
                     <li>
-                        <a  href="https://www.victoriassecretcn.com/fashion-show.php">维密秀</a>
+                        <a  href="维密SHOW.jsp">维密秀</a>
                     </li>
                 </ul>
             </nav>
