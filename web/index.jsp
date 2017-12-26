@@ -12,7 +12,7 @@
   </head>
   <body>
 
-  <%--<jsp:forward page="维多利亚/victoriaWelcome.jsp"></jsp:forward>--%>
+  <%--<jsp:forward page="维多利亚/欢迎进入维多利亚.jsp"></jsp:forward>--%>
 
   </body>
 </html>
