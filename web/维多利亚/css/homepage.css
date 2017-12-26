@@ -6,19 +6,21 @@
     bottom: 50px;
 }
 
+.vs-homepageOrder {
+    margin-top: 25px;
+}
 
+.vs-orderWrap {
+    border: 1px solid #bfbfbf;
+    padding: 50px 60px;
+    display: block;
+}
 
-/*.vs-orderWrap {*/
-    /*border: 1px solid #bfbfbf;*/
-    /*padding: 50px 60px;*/
-    /*display: block;*/
-/*}*/
-
-/*.vs-homeOrderCopy {*/
-    /*font-size: 1rem;*/
-    /*font-weight: 400;*/
-    /*letter-spacing: 3px;*/
-/*}*/
+.vs-homeOrderCopy {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
 
 .vs-homeOrderCopy h3 {
     font-size: 2rem;
@@ -26,24 +28,26 @@
     margin-bottom:30px;
     font-weight: 400;
 }
-/*.vs-homeorderBtn {*/
-  /*background: #ff3399;*/
-    /*border-color: #ff3399;*/
-    /*border-style: solid;*/
-    /*border-width: 0;*/
-    /*color: #fff;*/
-    /*min-height: 35px;*/
-    /*line-height: 21px;*/
-    /*min-width: 150px;*/
-    /*padding: 16px 45px 16px;*/
-    /*letter-spacing: 5px;*/
+.vs-homeorderBtn {
+    background: #ff3399;
+    border-color: #ff3399;
+    border-style: solid;
+    border-width: 0;
+    color: #fff;
+    min-height: 35px;
+    line-height: 21px;
+    min-width: 150px;
+    padding: 16px 45px 16px;
+    letter-spacing: 5px;
 
-/*}*/
-/*.vs-homeorderBtn:hover {*/
-  /*border-color: #bf215d;*/
-/*}*/
+}
+.vs-homeorderBtn:hover {
+    border-color: #bf215d;
+}
 
+.vs-homeOrderBtnGrp {
 
+}
 
 .terms {
     width: 80%;
@@ -57,35 +61,35 @@
 }
 
 @media (max-width: 768px) {
-.vs-homeKVCopy {
-    width: 60%;
-    position: absolute;
-    left: 50%;
-    margin-left: -30%;
-    bottom: 15px;
-}
-/*.vs-orderWrap {*/
-    /*padding: 25px 20px;*/
-/*}*/
-/*.vs-homeorderBtn {*/
-  /*min-width:100px;*/
-    /*padding: 6px 0px 6px;*/
-    /*letter-spacing: 2px;*/
-    /*font-size: .75rem;*/
-/*}*/
-.vs-homeOrderCopy h3 {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom:20px;
-}
-.vs-homeOrderCopy div p {
-    font-size: .75rem;
-    letter-spacing: 0;
-}
-.vs-main {
-  padding: 0;
-}
-.vs-homepageKV {
-  margin-top:25px;
-}
+    .vs-homeKVCopy {
+        width: 60%;
+        position: absolute;
+        left: 50%;
+        margin-left: -30%;
+        bottom: 15px;
+    }
+    .vs-orderWrap {
+        padding: 25px 20px;
+    }
+    .vs-homeorderBtn {
+        min-width:100px;
+        padding: 6px 0px 6px;
+        letter-spacing: 2px;
+        font-size: .75rem;
+    }
+    .vs-homeOrderCopy h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom:20px;
+    }
+    .vs-homeOrderCopy div p {
+        font-size: .75rem;
+        letter-spacing: 0;
+    }
+    .vs-main {
+        padding: 0;
+    }
+    .vs-homepageKV {
+        margin-top:25px;
+    }
 }

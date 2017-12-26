@@ -4,7 +4,7 @@
         var b = F[a] = {};
         return p.each(a.split(s), function (a, c) {
             b[c] = !0
-        }), b
+        })
     }
 
     function J(a, c, d) {
@@ -2773,7 +2773,7 @@
                 return a || e.body
             })
         }
-    }), p.each({scrollLeft: "pageXOffset", scrollTop: "pageYOffset"}, function (a, c) {
+    })/*, p.each({scrollLeft: "pageXOffset", scrollTop: "pageYOffset"}, function (a, c) {
         var d = /Y/.test(c);
         p.fn[a] = function (e) {
             return p.access(this, function (a, e, f) {
@@ -2782,7 +2782,7 @@
                 g ? g.scrollTo(d ? p(g).scrollLeft() : f, d ? f : p(g).scrollTop()) : a[e] = f
             }, a, e, arguments.length, null)
         }
-    }), p.each({Height: "height", Width: "width"}, function (a, c) {
+    })*/, p.each({Height: "height", Width: "width"}, function (a, c) {
         p.each({padding: "inner" + a, content: c, "": "outer" + a}, function (d, e) {
             p.fn[e] = function (e, f) {
                 var g = arguments.length && (d || typeof e != "boolean"),

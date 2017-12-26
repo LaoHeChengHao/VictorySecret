@@ -10,8 +10,9 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 
 
+
 </head>
-<body>
+<body >
 <div class="wrap">
 
     <div id="page">
@@ -40,9 +41,6 @@
                     </li>
                     <li>
                         <a  href="注册订阅.jsp">订阅</a>
-                    </li>
-                    <li>
-                        <a  href="#">门店位置</a>
                     </li>
                     <li>
                         <a  href="维密SHOW.jsp">维密秀</a>
@@ -128,7 +126,7 @@
                 <div class="container ">
                     <div class="row vs-footerRow">
                         <div class="col-md-2 col-md-push-4 col-xs-12 findStoreBox">
-                            <a href="#" class="vs-whiteLink footerStore">Victoria’s Secret合作酒店</a>
+                            <a href="#" class="vs-whiteLink footerStore">Victoria’s Secret合作假日酒店</a>
                         </div>
                         <div class="col-md-2 col-md-push-4 col-xs-12 findStoreBox">
                             <a href="http://192.168.10.177:8080/TomCat" class="vs-whiteLink footerStore">Victoria’s Secret合作健身房</a>

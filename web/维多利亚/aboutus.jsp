@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/globe.css"/>
     <link rel="stylesheet" type="text/css" href="css/homepage.css"/>
-    <link rel="shortcut icon" href="../维多利亚的秘密/下载图片/logo.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon"/>
 
 </head>
 <body>
@@ -46,7 +46,7 @@
         <div class="container ">
             <div class="row vs-footerRow">
                 <div class="col-md-2 col-md-push-4 col-xs-12 findStoreBox">
-                    <a href="#" class="vs-whiteLink footerStore">Victoria’s Secret合作酒店</a>
+                    <a href="#" class="vs-whiteLink footerStore">Victoria’s Secret合作假日酒店酒店</a>
                 </div>
                 <div class="col-md-2 col-md-push-4 col-xs-12 findStoreBox">
                     <a href="#" class="vs-whiteLink footerStore">Victoria’s Secret合作健身房</a>

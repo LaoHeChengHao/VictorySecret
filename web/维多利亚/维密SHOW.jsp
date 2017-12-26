@@ -11,9 +11,10 @@
     <link rel="stylesheet" type="text/css" href="css/fashion-show.css" />
 
 
+
 </head>
 <body>
-<div class="wrap" id="index">
+<div class="wrap" >
     <div  id="page">
         <header>
             <section class="container-fluid vs-topNav">
@@ -40,9 +41,6 @@
                     </li>
                     <li>
                         <a  href="注册订阅.jsp">订阅</a>
-                    </li>
-                    <li>
-                        <a  href="#">门店位置</a>
                     </li>
                     <li>
                         <a  href="维密SHOW.jsp">维密秀</a>
@@ -167,7 +165,7 @@
                 <p>唯一比走维密秀更令人激动的，<br class="mob">就是被选中演绎维密大秀的梦幻内衣！</p>
             </div>
 
-            <div class="video-wrap pc">
+       <%--     <div class="video-wrap pc">
                 <div class="video-wrap-bg">
                     <img src="img/video-new-bg.jpg">
                 </div>
@@ -193,7 +191,7 @@
                     <h2>The Train Like An Angel <br>Master Class</h2>
                     <p>5个天使，5个顶尖教练。<br>天使之路，一步到位。<br><span class="pc">立即观看 ></span></p>
                 </div>
-            </div>
+            </div>--%>
 
             <div class="img-wrap e-video-wrap e-video-wrap-3">
                 <div class="e-videoImg">
@@ -211,7 +209,7 @@
                 </div>
             </div>
 
-            <div class="video-wrap pc">
+       <%--     <div class="video-wrap pc">
                 <div class="video-wrap-bg">
                     <img src="img/video-wrap-bg.jpg">
                 </div>
@@ -236,20 +234,20 @@
                     <img src="img/video-wrap-bg-mob.jpg">
                 </div>
                 <div class="video-col3">
-                    <div class="video-cont" video-url="https://www.victoriassecretcn.com/assets/video/fashion-show/1110/video-1.mp4">
+                    <div class="video-cont" video-url="http://www.victoriassecretcn.com/assets/video/fashion-show/1110/video-1.mp4">
                         <img src="img/video-1.jpg">
                         <p>完整动作 </p>
                     </div>
-                    <div class="video-cont small" video-url="https://www.victoriassecretcn.com/assets/video/fashion-show/1110/video-2.mp4">
+                    <div class="video-cont small" video-url="http://www.victoriassecretcn.com/assets/video/fashion-show/1110/video-2.mp4">
                         <img src="img/video-2.jpg">
                         <p>重塑101 </p>
                     </div>
-                    <div class="video-cont small" video-url="https://www.victoriassecretcn.com/assets/video/fashion-show/1110/video-3.mp4">
+                    <div class="video-cont small" video-url="http://www.victoriassecretcn.com/assets/video/fashion-show/1110/video-3.mp4">
                         <img src="img/video-3.jpg">
                         <p>3个动作开始你的一天 </p>
                     </div>
                 </div>
-            </div>
+            </div>--%>
 
             <div class="img-wrap destination">
                 <img class="mob" src="img/destination-img-mob.jpg">
@@ -331,7 +329,7 @@
                 <div class="container ">
                     <div class="row vs-footerRow">
                         <div class="col-md-2 col-md-push-4 col-xs-12 ">
-                            <a href="http://192.168.10.108:8080/" class="vs-whiteLink footerStore">Victoria’s Secret合作酒店</a>
+                            <a href="http://192.168.10.108:8080/" class="vs-whiteLink footerStore">Victoria’s Secret合作假日酒店</a>
                         </div>
                         <!--跳转到对应的合作健身房-->
                         <div class="col-md-2 col-md-push-4 col-xs-12 ">

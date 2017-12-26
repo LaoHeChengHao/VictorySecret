@@ -13,7 +13,7 @@
 ga('create', 'UA-86229626-1', 'auto');
 ga('send', 'pageview');
 
-/*$('.footerStore').on('click', function() {
+$('.footerStore').on('click', function() {
     ga('send', {
         'hitType': 'event', // Required.
         'eventCategory': 'Footer', // Required.
@@ -21,7 +21,7 @@ ga('send', 'pageview');
         'eventLabel': '',
         'eventValue': 1
     });
-});*/
+});
 $('.vs-tamll').on('click', function() {
     ga('send', {
         'hitType': 'event', // Required.

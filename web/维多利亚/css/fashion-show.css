@@ -81,6 +81,8 @@ img {
 .fashion-show-kv {
     position: relative;
     width: 100%;
+//height: 648px;
+//background-image: url(../i/fashion-show/videoBg.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -209,10 +211,11 @@ img {
     margin-bottom: 15px;
 }
 
-.weibo-swiper {
+/*.weibo-swiper {
     height: 135px;
-}
-.swiper-button-prev, .swiper-button-next {
+}*/
+.swiper-button-prev,
+.swiper-button-next {
     top: 55%;
     width: 33px;
     height: 54px;
@@ -234,7 +237,7 @@ img {
 
 }
 .weibo-swiper .swiper-slide:hover {
-    //border: 1px solid #ccc;
+//border: 1px solid #ccc;
 }
 .weibo-swiper .swiper-slide:hover .mouseover-slide {
     display: block;
@@ -264,6 +267,7 @@ img {
     border: 1px solid #ccc;
 }
 
+.ww-wrap,
 .video-wrap-small {
     background: #000;
     color: #fff;
@@ -281,7 +285,7 @@ img {
     background-image: url(../img/boxBg.jpg);
 }
 
-
+.ww-wrap,
 .video-wrap-small {
     width: 980px;
     margin: 0 auto;
@@ -299,14 +303,14 @@ img {
     padding: 10px;
 }
 
-.weibo-icon {
+.wechat-icon, .weibo-icon {
     display: inline-block;
     width: 20px;
     margin: 0 10px;
     margin-bottom: 15px;
     cursor: pointer;
 }
-.weibo-icon {
+.wechat-icon, .weibo-icon {
     width: 30px;
     margin: 15px 10px;
 }
@@ -621,6 +625,13 @@ footer {
 .video-wrap-2-text h2 {
     padding-top: 50px;
 }
+/* ul.mobilePrivacyLink li:nth-child(1) {
+    margin-left: 30%;
+}
+
+ul.mobilePrivacyLink li:nth-child(2) {
+    display: none;
+} */
 .mob {
     display: none;
 }
@@ -634,7 +645,6 @@ footer {
     width: auto;
 }
 .guest {
-    margin-top:70px;
     margin-bottom: 70px;
 }
 .guest img {

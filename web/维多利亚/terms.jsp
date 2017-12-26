@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/globe.css" />
   <link rel="stylesheet" type="text/css" href="css/homepage.css" />
-  <link rel="shortcut icon" href="../维多利亚的秘密/下载图片/logo.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon"/>
 
 </head>
 <body>

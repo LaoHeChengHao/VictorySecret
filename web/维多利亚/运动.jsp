@@ -1,18 +1,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
     <title>维多利亚的秘密</title>
     <!--网页Logo打开标题-->
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon"/>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/globe.css">
-    <link rel="stylesheet" type="text/css" href="css/homepage.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 
 </head>
-<body style="overflow: auto; position: relative;">
-
-<div class="wrap" id="index">
+<body>
+<div class="wrap">
     <div  id="page">
         <header>
             <!--窗口缩小化时候的Logo显示，点击切换到首页-->
@@ -42,9 +41,6 @@
                     </li>
                     <li>
                         <a  href="注册订阅.jsp">订阅</a>
-                    </li>
-                    <li>
-                        <a  href="#">门店位置</a>
                     </li>
                     <li>
                         <a rel="维密SHOW.jsp">维密秀</a>
@@ -90,7 +86,7 @@
                 <div class="container ">
                     <div class="row vs-footerRow">
                         <div class="col-md-2 col-md-push-4 col-xs-12 findStoreBox">
-                            <a href="#" class="vs-whiteLink footerStore">Victoria’s Secret合作酒店</a>
+                            <a href="#" class="vs-whiteLink footerStore">Victoria’s Secret合作假日酒店</a>
                         </div>
                         <div class="col-md-2 col-md-push-4 col-xs-12 findStoreBox">
                             <a href="http://192.168.10.177:8080/TomCat" class="vs-whiteLink footerStore">Victoria’s Secret合作健身房</a>
@@ -165,8 +161,6 @@
 
 </div>
 
-<script src="js/analytics.js"></script>
-<script src="js/hm.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/globe.js"></script>

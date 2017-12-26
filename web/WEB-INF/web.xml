@@ -5,8 +5,8 @@
          version="3.1">
 
 
-    <welcome-file-list>
-        <welcome-file>/维多利亚/victoriaWelcome.jsp</welcome-file>
-    </welcome-file-list>
+    <!--<welcome-file-list>
+        <welcome-file>/欢迎进入维多利亚.jsp</welcome-file>
+    </welcome-file-list>-->
 
 </web-app>

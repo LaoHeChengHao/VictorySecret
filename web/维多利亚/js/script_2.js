@@ -1,6 +1,6 @@
 
     $(document).ready(function () {
-
+        //鼠标停在图片上会暂停轮播，点击左右箭头进行图片切换，鼠标移开图片继续进行轮播
         $(".index_focus").hover(function () {
             $(this).find(".index_focus_pre,.index_focus_next").stop(true, true).fadeTo("show", 1)
         }, function () {

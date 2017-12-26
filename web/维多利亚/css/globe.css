@@ -46,7 +46,7 @@ input[type=text]:focus, input[type=password]:focus, textarea:focus, input[type=t
 
 .wrap {
   width: 100%;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
   height: auto;
 }
 
@@ -79,7 +79,7 @@ a.menuActive {
 
 a.vs-whiteLink:link, a.vs-whiteLink:visited, a.vs-whiteLink:active {
   text-decoration: none;
-  /*cursor: pointer;*/
+  cursor: pointer;
   color: #FFF;
 }
 
@@ -96,18 +96,19 @@ a.termsHref {
   display: none;
 }
 
-/*.fabric {*/
-  /*font-family: Arial, sans-serif;*/
-  /*letter-spacing: .04rem;*/
-  /*text-transform: inherit;*/
-  /*font-weight: normal;*/
-/*}*/
+.fabric {
+  font-family: Arial, sans-serif;
+  letter-spacing: .04rem;
+  text-transform: inherit;
+  font-weight: normal;
+}
 
 .highLTxt {
   color: #ff3399;
 }
 
 nav#floating {
+  /*display: block;*/
   position: fixed;
   right: 40px;
   bottom: 80px;
@@ -139,21 +140,21 @@ nav#floating>* {
   border-radius: 25px;
 }
 
-/*.fab-ico--backtotop-before:before {*/
-  /*background-position: -799px -705px;*/
-  /*background-image: url(../i/fab-icon-desktop.png);*/
-  /*background-size: 1315px 1245px;*/
-  /*background-repeat: no-repeat;*/
-  /*overflow: hidden;*/
-  /*display: inline-block;*/
-  /*width: 18px;*/
-  /*height: 10px;*/
-  /*background-origin: content-box;*/
-  /*padding: 0;*/
-  /*content: '';*/
-  /*vertical-align: middle;*/
-  /*margin-right: 5px;*/
-/*}*/
+.fab-ico--backtotop-before:before {
+  background-position: -799px -705px;
+  background-image: url(../img/fab-icon-desktop.png);
+  background-size: 1315px 1245px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  width: 18px;
+  height: 10px;
+  background-origin: content-box;
+  padding: 0;
+  content: '';
+  vertical-align: middle;
+  margin-right: 5px;
+}
 
 .fabric a, .fab-link--default {
   text-decoration: none;
@@ -222,7 +223,7 @@ nav#floating>*:hover {
 }
 
 .vs-navList {
-  display: box;
+
   /* OLD - Android 4.4- */
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
@@ -305,27 +306,27 @@ nav#floating>*:hover {
   position: absolute;
 }
 
-/*.vs-vMiddle {*/
-  /*display: -ms-flex;*/
-  /*display: -webkit-flex;*/
-  /*display: flex;*/
-  /*-ms-flex-align: center;*/
-  /*-webkit-align-items: center;*/
-  /*-webkit-box-align: center;*/
-  /*align-items: center;*/
-/*}*/
+.vs-vMiddle {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
 
 footer {
   margin-top: 25px;
 }
 
-/*.findStore {*/
-  /*width: 19px;*/
-  /*height: 38px;*/
-  /*margin: 0 auto;*/
-  /*background: url(../i/fab-icon-desktop.png) no-repeat;*/
-  /*background-position: 81% -20px;*/
-/*}*/
+.findStore {
+  width: 19px;
+  height: 38px;
+  margin: 0 auto;
+  background: url(../img/fab-icon-desktop.png) no-repeat;
+  background-position: 81% -20px;
+}
 
 .findStoreActive {
   background-position: 81% -95px;
@@ -335,9 +336,9 @@ a.vs-whiteLink.findStoreActive {
   color: #ff3399;
 }
 
-/*.findStore:hover {*/
-  /*background-position: 81% -95px;*/
-/*}*/
+.findStore:hover {
+  background-position: 81% -95px;
+}
 
 .footFUC {
   background-color: #000;
@@ -360,7 +361,6 @@ a.vs-whiteLink.findStoreActive {
 .vs-footerRow {
   width: 90%;
   margin: 0 auto;
-  /*display: box;*/
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -438,36 +438,36 @@ body footer fieldset {
 }
 
 .vs-tamll {
-  font-size: .80rem;
+  font-size: .75rem;
 }
 
 .vs-tmallTitle {
   font-size: .875rem;
 }
 
-/*.vs-tmallIco {*/
-  /*width: 100%;*/
-  /*height: 30px;*/
-  /*background: url(../i/icoTmall.png) no-repeat;*/
-  /*background-position: center 0%;*/
-  /*display: block;*/
-/*}*/
+.vs-tmallIco {
+  width: 100%;
+  height: 30px;
+  background: url(../img/icoTmall.png) no-repeat;
+  background-position: center 0%;
+  display: block;
+}
 
-/*.vs-tamll a:hover .vs-tmallIco {*/
-  /*background-position: center 100%;*/
-/*}*/
+.vs-tamll a:hover .vs-tmallIco {
+  background-position: center 100%;
+}
 
 .vs-tmallCopy {
   letter-spacing: 2px;
 }
-/*合作酒店和健身房字体*/
+
 .footerStore {
   font-size: .75rem;
 }
-/*合作酒店和健身房指针点击格式*/
-/*.findStoreBox {*/
-  /*cursor: pointer;*/
-/*}*/
+
+.findStoreBox {
+  cursor: pointer;
+}
 
 .vs-input-text input {
   font-size: .75rem;
@@ -496,7 +496,6 @@ body footer fieldset {
   border: 0;
   background-color: #fff;
   /*color: #000;*/
-
 }
 
 body footer fieldset button {
@@ -620,7 +619,7 @@ button {
 
 .vs-ico-rightarrow-black-before:before {
   background-position: -67px -551px;
-  background-image: url(../i/fab-icon-mobile.png);
+  background-image: url(../img/fab-icon-desktop.png);
   background-size: 576px auto;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -676,7 +675,7 @@ button {
 
 .overlay .vs-modelPop h2 {
   font-size: 2rem;
-  font-weight: 600px;
+  font-weight: 600;
   margin-top: 40px;
   margin-bottom: 10px;
   letter-spacing: 5px;
@@ -688,7 +687,7 @@ button {
 
 .overlay .vs-modelPop h2 p {
   font-size: .875rem;
-  font-weight: 400px;
+  font-weight: 400;
 }
 
 .popUpBox {
@@ -724,7 +723,7 @@ a.popUpBox:hover {
 
 .fab-ico--overlay-close {
   background-position: -1171px -1083px;
-  background-image: url(../i/fab-icon-desktop.png);
+  background-image: url(../img/fab-icon-desktop.png);
   background-size: 1315px 1245px;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -901,10 +900,26 @@ a.popUpBox:hover {
   .vs-mobileHeaderNav {
     width: 100%;
     height: 100%;
+    /*display: flex;
+        align-items: center;
+        justify-content: space-between;*/
     display: block;
     padding-top: 6.5%;
   }
-
+  .vs-mobileHeaderNav #btnFind {
+    margin-left: 35%;
+  }
+  .vs-mobileHeaderNav #btnSubs {
+    float: right;
+  }
+  .vs-mobileHeader {
+    width: 90%;
+    height: 70px;
+  }
+  .vs-mobileHeaderNav img {
+    height: 22px;
+    width: auto;
+  }
   .vs-footerRow {
     display: block;
     height: auto;
