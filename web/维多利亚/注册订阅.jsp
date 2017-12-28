@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/globe.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 
 </head>
@@ -59,17 +59,21 @@
                     </div>
                 </div>
                 <div class="formWrap">
+                    <form action="/servlet/UserServlet?method=addUser" method="post">
                     <div class="row vs-popForm" style="margin-top:0">
                         <div class="col-xs-10 col-xs-push-1 col-sm-3 col-sm-push-3 col-md-4 col-md-push-4 vs-input-text inputFn">
-                            <input type="text" class="vs-popFormInput" placeholder="名字" maxlength="30" id="formFirstname" required/>
+                            <input type="text" class="vs-popFormInput" name="userName" placeholder="名字" maxlength="30" id="formFirstname" required/>
                             <div class="errowMsg errorFn">
                                 ＊请正确填写您的姓名
                             </div>
                         </div>
                     </div>
+                    <%
+                        String email = request.getParameter("email");
+                    %>
                     <div class="row vs-popForm">
                         <div class="col-xs-10 col-xs-push-1 col-md-4 col-md-push-4 col-sm-6 col-sm-push-3 vs-input-text inputEmail">
-                            <input type="email" class="vs-popFormInput" placeholder="邮箱" maxlength="30" id="formEmail" required/>
+                            <input type="email" class="vs-popFormInput" name="email" placeholder="邮箱" maxlength="30" id="formEmail" value="<%= email==null?"":email%>" required/>
                             <div class="errowMsg errorEmail">
                                 ＊请正确填写您的邮箱地址
                             </div>
@@ -77,7 +81,7 @@
                     </div>
                     <div class="row vs-popForm">
                         <div class="col-xs-10 col-xs-push-1 col-md-4 col-md-push-4 col-sm-6 col-sm-push-3 vs-input-text inputTel">
-                            <input type="tel" class="vs-popFormInput" placeholder="电话" maxlength="11" id="formMobile" required/>
+                            <input type="tel" class="vs-popFormInput" name="telephone" placeholder="电话" maxlength="11" id="formMobile" required/>
                             <div class="errowMsg errorMobile">
                                 ＊请正确填写您的电话号码
                             </div>
@@ -87,7 +91,7 @@
                         <div class="col-sm-8 col-sm-push-3 col-md-6 col-md-push-4">
                             <div class="checkbox" style="margin-top: 0px;">
                                 <label>
-                                    <input type="checkbox" id="emailCheckbox">我同意通过邮件和手机短信接收<span class="fabric">Victoria's Secret</span>的宣传推广和促销活动信息。
+                                    <input type="checkbox" id="emailCheckbox">我同意通过邮件接收<span class="fabric">Victoria's Secret</span>的宣传推广和促销活动信息。
                                 </label>
                                 <div class="errowMsg errorTypeof1">
                                 </div>
@@ -103,9 +107,9 @@
                         </div>
                     </div>
                     <div class="row vs-popForm text-center"  style="margin-top:40px;padding-bottom:140px">
-                        <button class="vs-homeorderBtn">点击注册</button>
+                        <button type="submit" class="vs-homeorderBtn">点击注册</button><%--<input class="vs-homeorderBtn" type="submit" value="点击注册">--%>
                     </div>
-
+                    </form>
                 </div>
                 <div class="submitSuccess">
                     <div>

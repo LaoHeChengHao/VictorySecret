@@ -10,8 +10,6 @@
     <link rel="stylesheet" type="text/css" href="css/swiper-3.4.1.min.css" />
     <link rel="stylesheet" type="text/css" href="css/fashion-show.css" />
 
-
-
 </head>
 <body>
 <div class="wrap" >
@@ -57,15 +55,9 @@
             </div>
             <!--表演阵容展示-->
             <div class="guest">
-                <img class="pc" src="img/guest-img2.jpg">
-                <img class="mob" src="img/guest-img-mob2.jpg">
                 <img class="guest-title" src="img/guest-img-1.jpg">
-                <h2>
-                    HARRY STYLES<br>
-                    MIGUEL<br>
-                    张靓颖<br>
-                    LESLIE ODOM JR.<br>
-                    李云迪</h2>
+                <img class="pc pcnew" src="img/guest-img2.jpg">
+                <img class="mob" src="img/guest-img-mob2.jpg">
             </div>
         </div>
 
@@ -165,33 +157,7 @@
                 <p>唯一比走维密秀更令人激动的，<br class="mob">就是被选中演绎维密大秀的梦幻内衣！</p>
             </div>
 
-       <%--     <div class="video-wrap pc">
-                <div class="video-wrap-bg">
-                    <img src="img/video-new-bg.jpg">
-                </div>
-                <div class="video-new-text">
-                    <p>5个天使，5个顶尖教练。<br>天使之路，一步到位。</p>
-                </div>
-                <div class="video-col1">
-                    <div class="video-cont" video-url="https://www.victoriassecretcn.com/assets/video/fashion-show/victoria_china.mp4">
-                        <img src="img/video-new.jpg">
-                        <p>立即观看 ></p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="img-wrap e-video-wrap e-video-wrap-5 mob">
-                <div class="e-videoImg">
-                    <img class="mob e-play" video-id="video" src="img/video-new.jpg">
-                    <video class="e-video" id="video" webkit-playsinline="true" playsinline="true" controls="controls">
-                        <source src="https://www.victoriassecretcn.com/assets/video/fashion-show/victoria_china.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="e-video-text" video-id="video">
-                    <h2>The Train Like An Angel <br>Master Class</h2>
-                    <p>5个天使，5个顶尖教练。<br>天使之路，一步到位。<br><span class="pc">立即观看 ></span></p>
-                </div>
-            </div>--%>
 
             <div class="img-wrap e-video-wrap e-video-wrap-3">
                 <div class="e-videoImg">
@@ -209,45 +175,6 @@
                 </div>
             </div>
 
-       <%--     <div class="video-wrap pc">
-                <div class="video-wrap-bg">
-                    <img src="img/video-wrap-bg.jpg">
-                </div>
-                <div class="video-col3">
-                    <div class="video-cont" video-url="https://www.victoriassecretcn.com/assets/video/fashion-show/1110/video-1.mp4">
-                        <img src="img/video-1.jpg">
-                        <p>完整动作 </p>
-                    </div>
-                    <div class="video-cont" video-url="https://www.victoriassecretcn.com/assets/video/fashion-show/1110/video-2.mp4">
-                        <img src="img/video-2.jpg">
-                        <p>重塑101 </p>
-                    </div>
-                    <div class="video-cont" video-url="https://www.victoriassecretcn.com/assets/video/fashion-show/1110/video-3.mp4">
-                        <img src="img/video-3.jpg">
-                        <p>3个动作开始你的一天 </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="video-wrap mob">
-                <div class="video-wrap-bg">
-                    <img src="img/video-wrap-bg-mob.jpg">
-                </div>
-                <div class="video-col3">
-                    <div class="video-cont" video-url="http://www.victoriassecretcn.com/assets/video/fashion-show/1110/video-1.mp4">
-                        <img src="img/video-1.jpg">
-                        <p>完整动作 </p>
-                    </div>
-                    <div class="video-cont small" video-url="http://www.victoriassecretcn.com/assets/video/fashion-show/1110/video-2.mp4">
-                        <img src="img/video-2.jpg">
-                        <p>重塑101 </p>
-                    </div>
-                    <div class="video-cont small" video-url="http://www.victoriassecretcn.com/assets/video/fashion-show/1110/video-3.mp4">
-                        <img src="img/video-3.jpg">
-                        <p>3个动作开始你的一天 </p>
-                    </div>
-                </div>
-            </div>--%>
 
             <div class="img-wrap destination">
                 <img class="mob" src="img/destination-img-mob.jpg">

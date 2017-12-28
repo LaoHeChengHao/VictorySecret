@@ -5,14 +5,14 @@
 		<meta charset="utf-8">
 		<title>维多利亚的秘密</title>
 		<!--需要添加的css和javacript-->
-		<link href="css/Yusheng.css" rel="stylesheet" type="text/css">
-		<script type="text/javascript" src="js/jquery1.js"></script>
-		<script type="text/javascript" src="js/jquery2.js"></script>
-		<script type="text/javascript" src="js/script_2.js"></script>
+		<link href="/维多利亚/css/Yusheng.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="/维多利亚/js/jquery1.js"></script>
+		<script type="text/javascript" src="/维多利亚/js/jquery2.js"></script>
+		<script type="text/javascript" src="/维多利亚/js/script_2.js"></script>
 		<!-- 标题标签-->
-		<link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+		<link rel="shortcut icon" href="/维多利亚/img/logo.png" type="image/x-icon" />
 		<!-- 书签标签-->
-		<link rel="bookmark" href="img/logo.png" />
+		<link rel="bookmark" href="/维多利亚/img/logo.png" />
 
 
 	</head>
@@ -25,37 +25,37 @@
 				<ul>
 					<li>
 						<!--你的首页链接地址-->
-						<a href="维多利亚的秘密.jsp" class="pic">
+						<a href="/维多利亚/维多利亚的秘密.jsp" class="pic">
 							<!--图片路径和宽高设置-->
-							<img class="pic" src="img/gs.jpg" width="100%" height="100%" alt="">
+							<img class="pic" src="/维多利亚/img/gs.jpg" width="100%"  alt="">
 						</a>
 					</li>
 					<li>
 						<!--你的首页链接地址-->
-						<a href="维多利亚的秘密.jsp" class="pic">
+						<a href="/维多利亚/维多利亚的秘密.jsp" class="pic">
 							<!--图片路径和宽高设置-->
-							<img class="pic" src="img/g1.jpg" width="100%" height="100%" alt="">
+							<img class="pic" src="/维多利亚/img/g1.jpg" width="100%"  alt="">
 						</a>
 					</li>
 					<li>
 						<!--你的首页链接地址-->
-						<a href="维多利亚的秘密.jsp" class="pic">
+						<a href="/维多利亚/维多利亚的秘密.jsp" class="pic">
 							<!--图片路径和宽高设置-->
-							<img class="pic" src="img/g2.jpg" width="100%" height="100%" alt="">
+							<img class="pic" src="/维多利亚/img/g2.jpg" width="100%"  alt="">
 						</a>
 					</li>
 					<li>
 						<!--你的首页链接地址-->
-						<a href="维多利亚的秘密.jsp" class="pic">
+						<a href="/维多利亚/维多利亚的秘密.jsp" class="pic">
 							<!--图片路径和宽高设置-->
-							<img class="pic" src="img/gnew4.jpg" width="100%" height="100%" alt="">
+							<img class="pic" src="/维多利亚/img/gnew4.jpg" width="100%"  alt="">
 						</a>
 					</li>
 					<li>
 						<!--你的首页链接地址-->
-						<a href="维多利亚的秘密.jsp" class="pic">
+						<a href="/维多利亚/维多利亚的秘密.jsp" class="pic">
 							<!--图片路径和宽高设置-->
-							<img class="pic" src="img/g5.jpg" width="100%" height="100%" alt="">
+							<img class="pic" src="/维多利亚/img/g5.jpg" width="100%"  alt="">
 						</a>
 					</li>
 				</ul>

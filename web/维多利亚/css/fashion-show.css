@@ -81,8 +81,6 @@ img {
 .fashion-show-kv {
     position: relative;
     width: 100%;
-//height: 648px;
-//background-image: url(../i/fashion-show/videoBg.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -91,17 +89,7 @@ img {
     background-position: 100% 170%;
 }
 
-/* .fashion-show-video:before {
-  content: ' ';
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: url(../i/fashion-show/videoBg.jpg) center 0 no-repeat;
-  background-size: cover;
-} */
+
 
 
 .kv-title {
@@ -625,13 +613,7 @@ footer {
 .video-wrap-2-text h2 {
     padding-top: 50px;
 }
-/* ul.mobilePrivacyLink li:nth-child(1) {
-    margin-left: 30%;
-}
 
-ul.mobilePrivacyLink li:nth-child(2) {
-    display: none;
-} */
 .mob {
     display: none;
 }
@@ -644,8 +626,9 @@ ul.mobilePrivacyLink li:nth-child(2) {
 .vs-footerShare img {
     width: auto;
 }
-.guest {
-    margin-bottom: 70px;
+.guest{
+    margin-bottom: 110px;
+    margin-top: 110px;
 }
 .guest img {
     width: 700px;
@@ -852,9 +835,10 @@ ul.mobilePrivacyLink li:nth-child(2) {
     .video-auto-text {
         padding: 20px 0 20px;
     }
-    .guest {
+    /*.guest {
         margin-bottom: 40px;
-    }
+
+    }*/
     .weibo-wrap {
         padding: 45px 0;
         padding-top: 60px;

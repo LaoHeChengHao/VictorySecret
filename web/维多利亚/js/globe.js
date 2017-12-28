@@ -85,12 +85,12 @@ $(function() {
         $("body").css("overflow","auto");
         $("body").css("position","relative");
     })
-    $(".vs-orderWrap .vs-homeorderBtn").on("click",function(){
+   /* $(".vs-orderWrap .vs-homeorderBtn").on("click",function(){
         // $("#regform").fadeIn();
         // $("body").css("overflow","hidden");
         // $("body").css("position","fixed");
         window.location.href = "subscribe.php";
-    })
+    })*/
     $(".icoWechat").on("mouseover",function(){
         $(".qrcodepic").fadeIn()
     })
@@ -100,8 +100,10 @@ $(function() {
     $(".icoWechat").on("touchstart",function(){
         $(".qrcodepic").fadeToggle();
     })
+
+
     $(".backtohome").on("click",function(){
-        window.location.href = "index.php";
+        window.location.href = "/维多利亚/维多利亚的秘密.jsp";
     })
     //   $('a[href*="#"]:not([href="#"])').click(function() {
     //   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -181,6 +183,6 @@ function jumpPage(tag) {
     //     scrollTop: $("#" + tag).offset().top
     //   }, 1000);
     // } else {
-    window.location.href = tag + ".php";
+    window.location.href = tag + ".jsp";
     // }
 }

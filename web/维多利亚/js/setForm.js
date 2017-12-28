@@ -10,20 +10,15 @@ if ($("#formEmail").val() != '') {
     });
 }
 
+//表单验证
 $(".vs-contentPage .vs-homeorderBtn").click(function(){
-    var lastname = $("#formLastname").val();
+
     var firstname = $("#formFirstname").val();
     var email = $("#formEmail").val();
     var mobile = $("#formMobile").val();
     var is_email = 0;
     var is_mobile = 0;
-    /*ga('send', {
-       'hitType': 'event', // Required.
-        'eventCategory': 'Sign Up', // Required.
-        'eventAction': 'Submission', // Required.
-        'eventLabel':  '',
-        'eventValue': 1
-    });*/
+
     if ($("#emailCheckbox").is(':checked')) {
         is_email = 1;
     }
@@ -35,12 +30,7 @@ $(".vs-contentPage .vs-homeorderBtn").click(function(){
         $(".vs-contentPage #formFirstname").focus()
         return false;
     }
-    if (lastname == "") {
-        //alert('请输入您的名字！');
-        $(".errorLn").show();
-        $(".vs-contentPage #formLastname").focus()
-        return false;
-    }
+
 
     var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
     if(!myreg.test(email))
@@ -73,7 +63,7 @@ $("#regform .vs-homeorderBtn").click(function(){
     if (block==true) {
         return;
     }
-    var lastname = $("#formLastname").val();
+
     var firstname = $("#formFirstname").val();
     var email = $("#formEmail").val();
     var mobile = $("#formMobile").val();
@@ -97,12 +87,7 @@ $("#regform .vs-homeorderBtn").click(function(){
         $("#regform #formFirstname").focus()
         return false;
     }
-    if (lastname == "") {
-        //alert('请输入您的名字！');
-        $(".errorLn").show();
-        $("#regform #formLastname").focus()
-        return false;
-    }
+
 
     var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
     if(!myreg.test(email))
@@ -131,7 +116,7 @@ $("#regform .vs-homeorderBtn").click(function(){
     if(block == false){
         block = true;
 
-        sendInfo(lastname,firstname,email,mobile,is_email,is_mobile)
+        sendInfo(firstname,email,mobile,is_email,is_mobile)
     }
 })
 
@@ -142,14 +127,14 @@ $("#regform input").keyup(function(event) {
 
 })
 
-function sendInfo(aa,bb,cc,dd,ee,ff) {
+
+/*function sendInfo(bb,cc,dd,ee,ff) {
 
     $.ajax({
-        url: './api/userInfo/signUp',
+        url: '/servlet/UserServlet?method=addUser',
         data:{
-            'first_name':bb,
-            'last_name':aa,
-            'mobile':dd,
+            'userName':bb,
+            'telephone':dd,
             'email':cc,
             'is_email':ee,
             'is_mobile':ff,
@@ -169,12 +154,10 @@ function sendInfo(aa,bb,cc,dd,ee,ff) {
                     'eventLabel':  cc + '-' + dd,
                     'eventValue': 1
                 });
-                //doTrack('BUT_Submit_SUCCESS_'+name);
-                //alert("提交成功");
+                //成功的界面显示，注册界面淡出
                 $(".submitSuccess").fadeIn();
                 $(".formWrap").fadeOut();
-                //$("#regform").fadeOut();
-                //$("body").css("position","relative");
+
                 block = false;
 
             } else{
@@ -188,8 +171,9 @@ function sendInfo(aa,bb,cc,dd,ee,ff) {
             alert('系统繁忙,请稍后重试');
         }
     })
-}
+}*/
 
+/*失去焦点隐藏*/
 $("input").blur(function(){
     $(".errowMsg").hide()
 })
