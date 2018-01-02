@@ -60,7 +60,7 @@
         <section class="container vs-main">
             <div class="row">
                 <div class="col-xs-12 hidden-xs">
-                    <a href="#" class="homemainKv"><img
+                    <a href="/bra-master/Underwear/WebContent/underwear.jsp" class="homemainKv"><img
                             alt="维多利亚的秘密2017新品上市" src="img/homepageKV.gif" class="img-responsive"></a>
                 </div>
             </div>
@@ -69,19 +69,19 @@
         <section class="container vs-main mobieKv">
             <div class="row visible-xs vs-homepageKV" id="beauty">
                 <div class="col-xs-12">
-                    <a href="美妆.jsp"><img alt="维多利亚的秘密彩妆,化妆品,香水" src="img/Beauty.jpg"
+                    <a href="/Vic-master/Beauty/WebContent/index.jsp"><img alt="维多利亚的秘密彩妆,化妆品,香水" src="img/Beauty.jpg"
                                           class="img-responsive"></a>
                 </div>
             </div>
             <div class="row visible-xs vs-homepageKV" id="sports">
                 <div class="col-xs-12">
-                    <a href="运动.jsp"><img alt="维多利亚的秘密运动系列,运动内衣" src="img/Sports.jpg"
+                    <a href="/Z-master/Victoria/WebContent/index.jsp"><img alt="维多利亚的秘密运动系列,运动内衣" src="img/Sports.jpg"
                                           class="img-responsive"></a>
                 </div>
             </div>
             <div class="row visible-xs vs-homepageKV" id="pink">
                 <div class="col-xs-12">
-                    <a href="新品.jsp"><img alt="维多利亚的秘密PINK" src="img/Pink.jpg"
+                    <a href="/Z-master/Victoria/WebContent/index.jsp"><img alt="维多利亚的秘密PINK" src="img/Pink.jpg"
                                           class="img-responsive"></a>
                 </div>
             </div>
@@ -93,11 +93,11 @@
                     <div class="row vs-footerRow">
                         <!--跳转到对应的合作酒店-->
                         <div class="col-md-2 col-md-push-4 col-xs-12 ">
-                                <a href="http://192.168.10.108:8080/" class="vs-whiteLink footerStore">Victoria’s Secret合作假日酒店</a>
+                                <a href="http://192.168.10.110:8080/" class="vs-whiteLink footerStore">Victoria’s Secret合作假日酒店</a>
                         </div>
                         <!--跳转到对应的合作健身房-->
                         <div class="col-md-2 col-md-push-4 col-xs-12 ">
-                                <a href="http://www.baidu.com" target="_blank" class="vs-whiteLink footerStore">Victoria’s Secret合作健身房</a>
+                                <a href="http://192.168.10.144:8080/" target="_blank" class="vs-whiteLink footerStore">Victoria’s Secret合作健身房</a>
                         </div>
                         <div class="col-md-4 col-md-pull-4 col-xs-12">
                             <p>

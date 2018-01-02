@@ -4,7 +4,7 @@
 <html>
 <head>
 <title>VICTORIA'S SECRET 维多利亚的秘密</title>
-<%@include file="/basePages/base.jsp" %>
+<%@include file="/Vic-master/Beauty/WebContent/basePages/base.jsp" %>
 	<!-- //header-bot结束 最顶端:搜索框+logo+登录+注册+购物车-->
 	<!-- banner 导航分类栏-->
 	<div class="ban-top">

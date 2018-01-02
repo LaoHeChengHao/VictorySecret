@@ -107,7 +107,7 @@
                         </div>
                     </div>
                     <div class="row vs-popForm text-center"  style="margin-top:40px;padding-bottom:140px">
-                        <button type="submit" class="vs-homeorderBtn">点击注册</button><%--<input class="vs-homeorderBtn" type="submit" value="点击注册">--%>
+                        <button type="submit" class="vs-homeorderBtn">点击订阅</button><%--<input class="vs-homeorderBtn" type="submit" value="点击注册">--%>
                     </div>
                     </form>
                 </div>
@@ -130,10 +130,10 @@
                 <div class="container ">
                     <div class="row vs-footerRow">
                         <div class="col-md-2 col-md-push-4 col-xs-12 findStoreBox">
-                            <a href="#" class="vs-whiteLink footerStore">Victoria’s Secret合作假日酒店</a>
+                            <a href="http://192.168.10.110:8080/" class="vs-whiteLink footerStore">Victoria’s Secret合作假日酒店</a>
                         </div>
                         <div class="col-md-2 col-md-push-4 col-xs-12 findStoreBox">
-                            <a href="http://192.168.10.177:8080/TomCat" class="vs-whiteLink footerStore">Victoria’s Secret合作健身房</a>
+                            <a href="http://192.168.10.144:8080/" class="vs-whiteLink footerStore">Victoria’s Secret合作健身房</a>
                         </div>
                         <div class="col-md-4 col-md-pull-4 col-xs-12">
                             <p>

@@ -40,12 +40,12 @@ public class UsersServlet  extends BaseServlet {
 			request.getSession().setAttribute("login", login);
 			//找到对象,登录成功,重定向到Login_Success.jsp
 			//使用getContextPath()动态的获取网页的路径
-			response.sendRedirect("index.jsp");
+			response.sendRedirect("/Vic-master/Beauty/WebContent/index.jsp");
 		}else{
 			
 			request.setAttribute("msg", "用户名或密码错误");
 			//登录失败,转发到本页面
-			request.getRequestDispatcher("login.jsp").forward(request, response);
+			request.getRequestDispatcher("/Vic-master/Beauty/WebContent/login.jsp").forward(request, response);
 		}
 		
 	}
@@ -60,7 +60,7 @@ public class UsersServlet  extends BaseServlet {
 	protected void lognOut(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.getSession().removeAttribute("login");
-		request.getRequestDispatcher("index.jsp").forward(request, response);
+		request.getRequestDispatcher("/Vic-master/Beauty/WebContent/index.jsp").forward(request, response);
 	}
 	
 	/**
@@ -83,12 +83,12 @@ public class UsersServlet  extends BaseServlet {
 		if(saveUser == 0)
 		{
 			//保存用户失败
-			request.getRequestDispatcher("register.jsp").forward(request, response);
+			request.getRequestDispatcher("/Vic-master/Beauty/WebContent/register.jsp").forward(request, response);
 		}
 		else
 		{
 			request.getSession().setAttribute("login", user);
-			response.sendRedirect("index.jsp");
+			response.sendRedirect("/Vic-master/Beauty/WebContent/index.jsp");
 		}
 	}
 	

@@ -23,6 +23,7 @@ public class MailUtils {
         // 此处填写你的账号
         props.put("mail.user", "279304739@qq.com");
         // 此处的密码就是前面说的16位STMP口令
+        //这里必须要到你所用的邮箱内去获取口令，不能直接用密码填入
         props.put("mail.password", "uuhtlxmkwscabifi");
 
         // 构建授权信息，用于进行SMTP进行身份验证

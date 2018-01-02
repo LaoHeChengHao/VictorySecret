@@ -54,7 +54,7 @@ $(".vs-contentPage .vs-homeorderBtn").click(function(){
     }
     if(block == false){
         block = true;
-        sendInfo(lastname,firstname,email,mobile,is_email,is_mobile)
+        sendInfo(firstname,email,mobile,is_email,is_mobile)
     }
 })
 

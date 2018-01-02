@@ -5,7 +5,7 @@
 <head>
 <title>VICTORIA'S SECRET 维多利亚的秘密</title>
 <!-- 每个页面都有的用户登录注册，以及登录注册成功后的情况 -->
-<%@include file="/basePages/base.jsp" %>
+<%@include file="/Vic-master/Beauty/WebContent/basePages/base.jsp" %>
 <!--  -->
 	<!-- banner 导航分类栏-->
 	<div class="ban-top">

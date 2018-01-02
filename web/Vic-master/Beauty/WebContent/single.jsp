@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>详情页</title>
-<%@include file="/basePages/base.jsp" %>
+<%@include file="/Vic-master/Beauty/WebContent/basePages/base.jsp" %>
 	<!-- banner 导航分类栏-->
 	<div class="ban-top">
 		<div class="container">

@@ -20,7 +20,7 @@
 
 </head>
 <body>
-	<form action="UsersServlet?method=register" method="post" id="form">
+	<form action="/Vic-master/Beauty/src/servlet/UsersServlet?method=register" method="post" id="form">
 		<table align="center" border="1">
 			<tr>
 				<td>用户名</td>

@@ -64,10 +64,10 @@
                 <div class="container ">
                     <div class="row vs-footerRow">
                         <div class="col-md-2 col-md-push-4 col-xs-12 findStoreBox">
-                            <a href="#" class="vs-whiteLink footerStore">Victoria’s Secret合作假日酒店</a>
+                            <a href="http://192.168.10.110:8080/" class="vs-whiteLink footerStore">Victoria’s Secret合作假日酒店</a>
                         </div>
                         <div class="col-md-2 col-md-push-4 col-xs-12 findStoreBox">
-                            <a href="http://192.168.10.177:8080/TomCat" class="vs-whiteLink footerStore">Victoria’s Secret合作健身房</a>
+                            <a href="http://192.168.10.144:8080/" class="vs-whiteLink footerStore">Victoria’s Secret合作健身房</a>
                         </div>
                         <div class="col-md-4 col-md-pull-4 col-xs-12">
                             <p>

@@ -26,7 +26,7 @@ public class UserServlet extends BaseServlet {
 
         if (b){
             try {
-                MailUtils.sendMail(user.getEmail(),"http://192.168.10.184:6060/servlet/UserServlet?method=updateUser&id="+user.getEmail());
+                MailUtils.sendMail(user.getEmail(),"http://192.168.10.185:6060/servlet/UserServlet?method=updateUser&id="+user.getEmail());
             } catch (MessagingException e) {
                 e.printStackTrace();
             }
