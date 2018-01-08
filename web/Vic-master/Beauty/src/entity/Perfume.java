@@ -3,41 +3,52 @@ package entity;
 import java.util.Date;
 
 /**
- * ÊµÌåÀà
- * 3.ÏãË®
- * @author Ê©ÓàÔµ
+ * å®ä½“ç±»
+ * 3.é¦™æ°´
+ * @author æ–½ä½™ç¼˜
  *
  */
 public class Perfume {
-	private Integer pId ;//1²úÆ·±àºÅ
-	private String pName;//2ÉÌÆ·Ãû
-	private String styleName; //3ÉÌÆ·¿îĞÍ
-	private String  colour;//4ÉÌÆ·ÑÕÉ«
-	private Integer  inventory;//5ÉÌÆ·¿â´æ
-	private Integer  sale;//6ÏúÊÛÁ¿
-	private Integer  price; //7¼ÛÇ®
-	private String picture;//8Í¼Æ¬Â·¾¶
-	private Date time;//9ÉÏ¼ÜÊ±¼ä
-	//ÎŞ²Î¹¹Ôì
+	private Integer pId ;//1.äº§å“ç¼–å·
+	private String pName;//2.å•†å“å
+	private String styleName; //3.å•†å“æ¬¾å‹
+	private String  colour;//4.å•†å“é¢œè‰²
+	private String type;//5.é¦™å‹
+	private String brand;//6.å“ç‰Œ
+	private String NetWeight;//7.å‡€å«é‡ï¼Œé¦™æ°´å‡€å«é‡ä¸ºX.Xml(æ¯«å‡)
+	private Integer  inventory;//8.å•†å“åº“å­˜
+	private Integer  sale;//9.é”€å”®é‡
+	private Double  price; //10.ä»·é’±
+	private String picture;//11ä¸»å›¾ç‰‡
+	private Integer picturesId;//12.å¯¹åº”å›¾ç‰‡åº“æ•°æ®
+	private Date time;//13.ä¸Šæ¶æ—¶é—´
+	//æ— å‚æ„é€ 
 	public Perfume() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
-	//ÓĞ²Î¹¹Ôì
-	public Perfume(Integer pId, String pName, String styleName, String colour, Integer inventory, Integer sale,
-			Integer price, String picture, Date time) {
+
+	//å¸¦å‚æ„é€ 
+	
+	public Perfume(Integer pId, String pName, String styleName, String colour, String type, String brand,
+			String netWeight, Integer inventory, Integer sale, Double price, String picture, Integer picturesId,
+			Date time) {
 		super();
 		this.pId = pId;
 		this.pName = pName;
 		this.styleName = styleName;
 		this.colour = colour;
+		this.type = type;
+		this.brand = brand;
+		NetWeight = netWeight;
 		this.inventory = inventory;
 		this.sale = sale;
 		this.price = price;
 		this.picture = picture;
+		this.picturesId = picturesId;
 		this.time = time;
 	}
-	//getºÍset·½·¨
+
+	//getå’Œsetæ–¹æ³•
 	public Integer getpId() {
 		return pId;
 	}
@@ -47,6 +58,30 @@ public class Perfume {
 	public String getpName() {
 		return pName;
 	}
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public String getBrand() {
+		return brand;
+	}
+
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+
+	public String getNetWeight() {
+		return NetWeight;
+	}
+
+	public void setNetWeight(String netWeight) {
+		NetWeight = netWeight;
+	}
+
 	public void setpName(String pName) {
 		this.pName = pName;
 	}
@@ -74,10 +109,10 @@ public class Perfume {
 	public void setSale(Integer sale) {
 		this.sale = sale;
 	}
-	public Integer getPrice() {
+	public Double getPrice() {
 		return price;
 	}
-	public void setPrice(Integer price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
 	public String getPicture() {
@@ -86,17 +121,23 @@ public class Perfume {
 	public void setPicture(String picture) {
 		this.picture = picture;
 	}
+	public Integer getPicturesId() {
+		return picturesId;
+	}
+	public void setPicturesId(Integer picturesId) {
+		this.picturesId = picturesId;
+	}
 	public Date getTime() {
 		return time;
 	}
 	public void setTime(Date time) {
 		this.time = time;
 	}
-	//ÏÔÊ¾
 	@Override
 	public String toString() {
 		return "Perfume [pId=" + pId + ", pName=" + pName + ", styleName=" + styleName + ", colour=" + colour
-				+ ", inventory=" + inventory + ", sale=" + sale + ", price=" + price + ", picture=" + picture
+				+ ", type=" + type + ", brand=" + brand + ", NetWeight=" + NetWeight + ", inventory=" + inventory
+				+ ", sale=" + sale + ", price=" + price + ", picture=" + picture + ", picturesId=" + picturesId
 				+ ", time=" + time + "]";
 	}
 	

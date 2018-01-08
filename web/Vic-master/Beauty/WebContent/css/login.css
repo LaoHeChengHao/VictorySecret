@@ -114,14 +114,15 @@ h1 {
 /* 小头像  */
 .avtar {
 	width: 177px;
-	height: 220px;
+	height: 125px;
 	margin: 2% auto 0 auto;
 	padding-bottom: 1em;
 	background-size: 100%;
 }
 
+/* 登录框的设置开始  */
 .login-form {
-	width: 33%;
+	width: 50%;
 	height: 100%;
 	margin: 0 auto;
 	text-align: center;
@@ -129,11 +130,33 @@ h1 {
 }
 
 form {
-	padding-top: 1em;
+	padding-top: 0em;
 	background: #dee1e8;
 	border-radius: .4em;
 }
-
+/* 用户名+密码的框的设置 */
+.form-text{
+	width:600px;
+	height:155px;
+	line-height: 50px;
+	padding:40px;
+}
+/* 登录按钮所在的框的设置 */
+.form-text1{
+	width:94%;
+	height:66px;
+	line-height: 50px;
+	padding:20px;
+}
+/* 按钮的设置 */
+.btn-login{
+	width: 22%;
+	height: 54px;
+	color: #fff;
+    background: #e22;
+    border: 0;
+    font-size: 16px;
+}
 form li {
 	list-style: none;
 	margin-bottom: 25px;
@@ -144,10 +167,20 @@ form li {
 	-o-border-radius: 0.3em;
 	-moz-border-radius: 0.3em;
 }
-
+/* 登录框的设置结束  */
+/* 提示区的设置 */
+.notes{
+	width:520px;
+	height:50px;
+}
+#check,#check2{
+	width:50px;
+	height:50px;
+	color:red;
+}
 /* 用户名 */
 input[type="text"] {
-	font-family: 'Open Sans', sans-serif;
+	/* font-family: 'Open Sans', sans-serif; */
 	width: 40%;
 	padding: 1em 1em 1em 1em;
 	color: #3D3E6A;
@@ -166,7 +199,7 @@ input[type="text"] {
 
 /* 密码框 */
 input[type="password"] {
-	font-family: 'Open Sans', sans-serif;
+	/* font-family: 'Open Sans', sans-serif; */
 	width: 40%;
 	padding: 1em 1em 1em 1em;
 	color: #3D3E6A;
@@ -190,7 +223,8 @@ input[type="submit"] {
 	border: none;
 	font-size: 1em;
 	cursor: pointer;
-	width: 8%;
+	width: 100%;
+	height:100%;
 	color: #fff;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -259,7 +293,7 @@ input[type="submit"]:hover {
 
 @media ( max-width :1024px) {
 	.login-form {
-		width: 48%;
+		width: 56%;
 	}
 	h1 {
 		padding-top: 1em;

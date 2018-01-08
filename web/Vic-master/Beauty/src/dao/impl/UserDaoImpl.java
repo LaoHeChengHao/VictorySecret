@@ -37,7 +37,7 @@ public class UserDaoImpl extends BaseDao<User> implements UserDao{
 
 	@Override
 	public int saveUser(User user) {
-		String sql=" INSERT INTO victoria.user ( userName,PASSWORD,email, telephone, createTime) "+
+		String sql=" INSERT INTO victoria.user (userName,PASSWORD,email, telephone, createTime) "+
 				" VALUES (?, ?, ?,?,?)";
 		int result = this.update(sql, user.getUserName(),user.getPassword(),user.getEmail(),user.getTelephone(),new Date());
 		return result;

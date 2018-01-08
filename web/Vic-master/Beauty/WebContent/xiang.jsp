@@ -1,10 +1,21 @@
+<%@page import="entity.Perfume"%>
+<%@page import="java.util.List"%>
+<%@page import="dao.impl.PerfumeDaoImpl"%>
+<%@page import="dao.PerfumeDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <title>VICTORIA'S SECRET 维多利亚的秘密</title>
-<%@include file="/Vic-master/Beauty/WebContent/basePages/base.jsp"%>
+<%@include file="/basePages/base.jsp"%>
+<!--  -->
+<%
+	PerfumeDao per = new PerfumeDaoImpl();
+	//使用service层中的方法，获取所有香水信息
+	List<Perfume> allPerfume = per.getAllPerfume();
+%>
 <!-- banner 导航分类栏-->
 <div class="ban-top">
 	<div class="container">
@@ -26,14 +37,15 @@
 							<div class="agile_inner_drop_nav_info">
 								<!--口红的小图标-->
 								<div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-									<a href="chun.jsp"><img src="images/top2.jpg" alt=" " /></a>
+									<a href="RougeServlet?method=showAllRouge"><img
+										src="images/top2.jpg" alt=" " /></a>
 								</div>
 								<div class="col-sm-3 multi-gd-img">
 									<ul class="multi-column-dropdown">
-										<li><a href="chun.jsp">口红</a></li>
-										<li><a href="chun.jsp">唇彩</a></li>
-										<li><a href="chun.jsp">唇釉</a></li>
-										<li><a href="chun.jsp">唇膏</a></li>
+										<li><a href="RougeServlet?method=showAllRouge">口红</a></li>
+										<li><a href="RougeServlet?method=showAllRouge">唇彩</a></li>
+										<li><a href="RougeServlet?method=showAllRouge">唇釉</a></li>
+										<li><a href="RougeServlet?method=showAllRouge">唇膏</a></li>
 									</ul>
 								</div>
 								<div class="clearfix"></div>
@@ -50,13 +62,14 @@
 							<div class="agile_inner_drop_nav_info">
 								<div class="col-sm-3 multi-gd-img">
 									<ul class="multi-column-dropdown">
-										<li><a href="body.jsp">护手霜</a></li>
-										<li><a href="body.jsp">身体乳</a></li>
+										<li><a href="SkinServlet?method=showAllSkin">面霜</a></li>
+										<li><a href="SkinServlet?method=showAllSkin">身体乳</a></li>
 									</ul>
 								</div>
 								<!--护肤的小图标-->
 								<div class="col-sm-6 multi-gd-img multi-gd-text ">
-									<a href="body.jsp"><img src="images/top1.jpg" alt=" " /></a>
+									<a href="SkinServlet?method=showAllSkin"><img
+										src="images/top1.jpg" alt=" " /></a>
 								</div>
 								<div class="clearfix"></div>
 							</div>
@@ -64,7 +77,8 @@
 
 					<!--香水-->
 					<li class=" menu__item menu__item--current"><a
-						class="menu__link" href="xiang.jsp">香水 </a></li>
+						class="menu__link" href="PerfumeServlet?method=showAllPerfume">香水
+					</a></li>
 					<!-- 链接到另外两个门店 -->
 					<li class=" menu__item"><a class="menu__link" href="#"
 						style="color: red;">内衣馆 </a></li>
@@ -80,94 +94,7 @@
 </div>
 </div>
 <!-- //banner-top -->
-<!-- Modal1 -->
-<!--最上方登录的点击事件-->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-	<div class="modal-dialog">
-		<!-- Modal content-->
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-			</div>
-			<div class="modal-body modal-body-sub_agile">
-				<div class="col-md-8 modal_body_left modal_body_left1">
-					<h3 class="agileinfo_sign">
-						<span>立即</span>登录
-					</h3>
-					<form action="#" method="post">
-						<div class="styled-input agile-styled-input-top">
-							<input type="text" name="Name" required=""> <label>姓名</label>
-							<span></span>
-						</div>
-						<div class="styled-input">
-							<input type="email" name="Email" required=""> <label>邮箱</label>
-							<span></span>
-						</div>
-						<input type="submit" value="登 录">
-					</form>
-					<div class="clearfix"></div>
-					<p>
-						<a href="#" data-toggle="modal" data-target="#myModal2"> 没有账户?</a>
-					</p>
 
-				</div>
-				<div class="col-md-4 modal_body_right modal_body_right1">
-					<img src="images/log_pic.jpg" alt=" " />
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-		<!-- //Modal content-->
-	</div>
-</div>
-<!-- //Modal1 -->
-<!-- Modal2 -->
-<!--最上方注册的点击事件-->
-<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
-	<div class="modal-dialog">
-		<!-- Modal content-->
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-			</div>
-			<div class="modal-body modal-body-sub_agile">
-				<div class="col-md-8 modal_body_left modal_body_left1">
-					<h3 class="agileinfo_sign">
-						立即 <span>注册</span>
-					</h3>
-					<form action="#" method="post">
-						<div class="styled-input agile-styled-input-top">
-							<input type="text" name="Name" required=""> <label>姓名</label>
-							<span></span>
-						</div>
-						<div class="styled-input">
-							<input type="email" name="Email" required=""> <label>邮箱</label>
-							<span></span>
-						</div>
-						<div class="styled-input">
-							<input type="password" name="password" required=""> <label>密码</label>
-							<span></span>
-						</div>
-						<div class="styled-input">
-							<input type="password" name="Confirm Password" required="">
-							<label>再次 确认</label> <span></span>
-						</div>
-						<input type="submit" value="注 册">
-					</form>
-					<div class="clearfix"></div>
-					<p>
-						<a href="#">点击同意协议</a>
-					</p>
-
-				</div>
-				<div class="col-md-4 modal_body_right modal_body_right1">
-					<img src="images/log_pic.jpg" alt=" " />
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-	</div>
-</div>
 <!-- banner -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 	<!-- Indicators 轮播图小点-->
@@ -217,344 +144,66 @@
 	<!-- The Modal -->
 </div>
 <!-- //banner 轮播图结束-->
-<!--香水商品开始-->
+<!--*********************************香水商品开始************************************8-->
 <div class="tab4">
-
-	<div class="col-md-3 product-men">
-		<div class="men-pro-item simpleCart_shelfItem">
-			<div class="men-thumb-item">
-				<img src="images/s1.jpg" alt="" class="pro-image-front"> <img
-					src="images/s1.jpg" alt="" class="pro-image-back">
-				<div class="men-cart-pro">
-					<div class="inner-men-cart-pro">
-						<a href="xiang.jsp" class="link-product-add-cart">快速 查看</a>
+	<%
+		if (allPerfume == null) {
+	%>
+	<h1>商品暂时未上架</h1>
+	<%
+		} else {
+	%>
+	<!-- 从数据库中遍历出信息 -->
+	<c:forEach items="${allPerfume}" var="perfume">
+			<div class="single-pro">
+				<div class="col-md-3 product-men">
+					<div class="men-pro-item simpleCart_shelfItem">
+						<div class="men-thumb-item">
+							<img src="${perfume.picture}" alt="" class="pro-image-front">
+							<img src="${perfume.picture}" alt="" class="pro-image-back">
+							<div class="men-cart-pro">
+								<div class="inner-men-cart-pro">
+									<a href="xiang.jsp" class="link-product-add-cart">快速 查看</a>
+								</div>
+							</div>
+							<span class="product-new-top">New</span>
+						</div>
+						<div class="item-info-product ">
+							<h4>
+								<a
+									href="PerfumeServlet?method=showOnePerfume&pId=${perfume.pId}">${perfume.styleName}</a>
+							</h4>
+							<div class="info-product-price">
+								<span class="item_price">￥${perfume.price}</span>
+							</div>
+							<div
+								class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+								<form action="#" method="post">
+									<fieldset>
+										<input type="hidden" name="cmd" value="_cart" /> <input
+											type="hidden" name="add" value="1" /> <input type="hidden"
+											name="business" value=" " /> <input type="hidden"
+											name="item_name" value="${perfume.styleName}" /> <input
+											type="hidden" name="amount" value="${perfume.price}" /> <input
+											type="hidden" name="discount_amount" value="1.00" /> <input
+											type="hidden" name="currency_code" value="RMB" /> <input
+											type="hidden" name="return" value=" " /> <input
+											type="hidden" name="cancel_return" value=" " /> <input
+											type="submit" name="submit" value="加入购物车" class="button" />
+									</fieldset>
+								</form>
+							</div>
+						</div>
 					</div>
 				</div>
-				<span class="product-new-top">New</span>
-
-			</div>
-			<div class="item-info-product ">
-				<h4>
-					<a href="xiang.jsp">香水1</a>
-				</h4>
-				<div class="info-product-price">
-					<span class="item_price">￥80.99</span>
-					<del>￥89.71</del>
 				</div>
-				<div
-					class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-					<form action="#" method="post">
-						<fieldset>
-							<input type="hidden" name="cmd" value="_cart" /> <input
-								type="hidden" name="add" value="1" /> <input type="hidden"
-								name="business" value=" " /> <input type="hidden"
-								name="item_name" value="香水1" /> <input type="hidden"
-								name="amount" value="30.99" /> <input type="hidden"
-								name="discount_amount" value="1.00" /> <input type="hidden"
-								name="currency_code" value="RMB" /> <input type="hidden"
-								name="return" value=" " /> <input type="hidden"
-								name="cancel_return" value=" " /> <input type="submit"
-								name="submit" value="加入购物车" class="button" />
-						</fieldset>
-					</form>
-				</div>
-
-			</div>
-		</div>
-	</div>
-	<div class="col-md-3 product-men">
-		<div class="men-pro-item simpleCart_shelfItem">
-			<div class="men-thumb-item">
-				<img src="images/s2.jpg" alt="" class="pro-image-front"> <img
-					src="images/s2.jpg" alt="" class="pro-image-back">
-				<div class="men-cart-pro">
-					<div class="inner-men-cart-pro">
-						<a href="xiang.jsp" class="link-product-add-cart">快速 查看</a>
-					</div>
-				</div>
-				<span class="product-new-top">New</span>
-
-			</div>
-			<div class="item-info-product ">
-				<h4>
-					<a href="single.jsp">香水2</a>
-				</h4>
-				<div class="info-product-price">
-					<span class="item_price">￥90.99</span>
-					<del>￥59.71</del>
-				</div>
-				<div
-					class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-					<form action="#" method="post">
-						<fieldset>
-							<input type="hidden" name="cmd" value="_cart" /> <input
-								type="hidden" name="add" value="1" /> <input type="hidden"
-								name="business" value=" " /> <input type="hidden"
-								name="item_name" value="香水2" /> <input type="hidden"
-								name="amount" value="30.99" /> <input type="hidden"
-								name="discount_amount" value="1.00" /> <input type="hidden"
-								name="currency_code" value="RMB" /> <input type="hidden"
-								name="return" value=" " /> <input type="hidden"
-								name="cancel_return" value=" " /> <input type="submit"
-								name="submit" value="加入购物车" class="button" />
-						</fieldset>
-					</form>
-				</div>
-
-			</div>
-		</div>
-	</div>
-	<div class="col-md-3 product-men">
-		<div class="men-pro-item simpleCart_shelfItem">
-			<div class="men-thumb-item">
-				<img src="images/s3.jpg" alt="" class="pro-image-front"> <img
-					src="images/s3.jpg" alt="" class="pro-image-back">
-				<div class="men-cart-pro">
-					<div class="inner-men-cart-pro">
-						<a href="xiang.jsp" class="link-product-add-cart">快速查看</a>
-					</div>
-				</div>
-				<span class="product-new-top">New</span>
-
-			</div>
-			<div class="item-info-product ">
-				<h4>
-					<a href="xiang.jsp">香水3</a>
-				</h4>
-				<div class="info-product-price">
-					<span class="item_price">￥90.99</span>
-					<del>￥59.71</del>
-				</div>
-				<div
-					class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-					<form action="#" method="post">
-						<fieldset>
-							<input type="hidden" name="cmd" value="_cart" /> <input
-								type="hidden" name="add" value="1" /> <input type="hidden"
-								name="business" value=" " /> <input type="hidden"
-								name="item_name" value="香水3" /> <input type="hidden"
-								name="amount" value="30.99" /> <input type="hidden"
-								name="discount_amount" value="1.00" /> <input type="hidden"
-								name="currency_code" value="RMB" /> <input type="hidden"
-								name="return" value=" " /> <input type="hidden"
-								name="cancel_return" value=" " /> <input type="submit"
-								name="submit" value="加入购物车" class="button" />
-						</fieldset>
-					</form>
-				</div>
-
-			</div>
-		</div>
-	</div>
-	<div class="col-md-3 product-men">
-		<div class="men-pro-item simpleCart_shelfItem">
-			<div class="men-thumb-item">
-				<img src="images/s4.jpg" alt="" class="pro-image-front"> <img
-					src="images/s4.jpg" alt="" class="pro-image-back">
-				<div class="men-cart-pro">
-					<div class="inner-men-cart-pro">
-						<a href="xiang.jsp" class="link-product-add-cart">快速查看</a>
-					</div>
-				</div>
-				<span class="product-new-top">New</span>
-
-			</div>
-			<div class="item-info-product ">
-				<h4>
-					<a href="xiang.jsp">香水4</a>
-				</h4>
-				<div class="info-product-price">
-					<span class="item_price">￥40.99</span>
-					<del>￥99.71</del>
-				</div>
-				<div
-					class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-					<form action="#" method="post">
-						<fieldset>
-							<input type="hidden" name="cmd" value="_cart" /> <input
-								type="hidden" name="add" value="1" /> <input type="hidden"
-								name="business" value=" " /> <input type="hidden"
-								name="item_name" value="香水4" /> <input type="hidden"
-								name="amount" value="30.99" /> <input type="hidden"
-								name="discount_amount" value="1.00" /> <input type="hidden"
-								name="currency_code" value="RMB" /> <input type="hidden"
-								name="return" value=" " /> <input type="hidden"
-								name="cancel_return" value=" " /> <input type="submit"
-								name="submit" value="加入购物车" class="button" />
-						</fieldset>
-					</form>
-				</div>
-
-			</div>
-		</div>
-	</div>
-	<div class="col-md-3 product-men">
-		<div class="men-pro-item simpleCart_shelfItem">
-			<div class="men-thumb-item">
-				<img src="images/s5.jpg" alt="" class="pro-image-front"> <img
-					src="images/s5.jpg" alt="" class="pro-image-back">
-				<div class="men-cart-pro">
-					<div class="inner-men-cart-pro">
-						<a href="xiang.jsp" class="link-product-add-cart">快速查看</a>
-					</div>
-				</div>
-				<span class="product-new-top">New</span>
-
-			</div>
-			<div class="item-info-product ">
-				<h4>
-					<a href="xiang.jsp">香水5 </a>
-				</h4>
-				<div class="info-product-price">
-					<span class="item_price">￥80.99</span>
-					<del>￥99.71</del>
-				</div>
-				<div
-					class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-					<form action="#" method="post">
-						<fieldset>
-							<input type="hidden" name="cmd" value="_cart" /> <input
-								type="hidden" name="add" value="1" /> <input type="hidden"
-								name="business" value=" " /> <input type="hidden"
-								name="item_name" value="香水5" /> <input type="hidden"
-								name="amount" value="30.99" /> <input type="hidden"
-								name="discount_amount" value="1.00" /> <input type="hidden"
-								name="currency_code" value="RMB" /> <input type="hidden"
-								name="return" value=" " /> <input type="hidden"
-								name="cancel_return" value=" " /> <input type="submit"
-								name="submit" value="加入购物车" class="button" />
-						</fieldset>
-					</form>
-				</div>
-
-			</div>
-		</div>
-	</div>
-	<div class="col-md-3 product-men">
-		<div class="men-pro-item simpleCart_shelfItem">
-			<div class="men-thumb-item">
-				<img src="images/s6.jpg" alt="" class="pro-image-front"> <img
-					src="images/s6.jpg" alt="" class="pro-image-back">
-				<div class="men-cart-pro">
-					<div class="inner-men-cart-pro">
-						<a href="xiang.jsp" class="link-product-add-cart">快速 查看</a>
-					</div>
-				</div>
-				<span class="product-new-top">New</span>
-
-			</div>
-			<div class="item-info-product ">
-				<h4>
-					<a href="xiang.jsp">香水6 </a>
-				</h4>
-				<div class="info-product-price">
-					<span class="item_price">￥120.99</span>
-					<del>￥199.71</del>
-				</div>
-				<div
-					class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-					<form action="#" method="post">
-						<fieldset>
-							<input type="hidden" name="cmd" value="_cart" /> <input
-								type="hidden" name="add" value="1" /> <input type="hidden"
-								name="business" value=" " /> <input type="hidden"
-								name="item_name" value="香水6" /> <input type="hidden"
-								name="amount" value="30.99" /> <input type="hidden"
-								name="discount_amount" value="1.00" /> <input type="hidden"
-								name="currency_code" value="RMB" /> <input type="hidden"
-								name="return" value=" " /> <input type="hidden"
-								name="cancel_return" value=" " /> <input type="submit"
-								name="submit" value="加入购物车" class="button" />
-						</fieldset>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-3 product-men">
-		<div class="men-pro-item simpleCart_shelfItem">
-			<div class="men-thumb-item">
-				<img src="images/s7.jpg" alt="" class="pro-image-front"> <img
-					src="images/s7.jpg" alt="" class="pro-image-back">
-				<div class="men-cart-pro">
-					<div class="inner-men-cart-pro">
-						<a href="xiang.jsp" class="link-product-add-cart">快速 查看</a>
-					</div>
-				</div>
-				<span class="product-new-top">New</span>
-
-			</div>
-			<div class="item-info-product ">
-				<h4>
-					<a href="xiang.jsp">香水7</a>
-				</h4>
-				<div class="info-product-price">
-					<span class="item_price">￥160.99</span>
-					<del>￥199.71</del>
-				</div>
-				<div
-					class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-					<form action="#" method="post">
-						<fieldset>
-							<input type="hidden" name="cmd" value="_cart" /> <input
-								type="hidden" name="add" value="1" /> <input type="hidden"
-								name="business" value=" " /> <input type="hidden"
-								name="item_name" value="香水7" /> <input type="hidden"
-								name="amount" value="30.99" /> <input type="hidden" name="折扣"
-								value="1.00" /> <input type="hidden" name="currency_code"
-								value="RMB" /> <input type="hidden" name="return" value=" " />
-							<input type="hidden" name="cancel_return" value=" " /> <input
-								type="submit" name="submit" value="加入购物车" class="button" />
-						</fieldset>
-					</form>
-				</div>
-
-			</div>
-		</div>
-	</div>
-	<div class="col-md-3 product-men">
-		<div class="men-pro-item simpleCart_shelfItem">
-			<div class="men-thumb-item">
-				<img src="images/s8.jpg" alt="" class="pro-image-front"> <img
-					src="images/s8.jpg" alt="" class="pro-image-back">
-				<div class="men-cart-pro">
-					<div class="inner-men-cart-pro">
-						<a href="xiang.jsp" class="link-product-add-cart">快速查看</a>
-					</div>
-				</div>
-				<span class="product-new-top">New</span>
-
-			</div>
-			<div class="item-info-product ">
-				<h4>
-					<a href="xiang.jsp">香水8</a>
-				</h4>
-				<div class="info-product-price">
-					<span class="item_price">￥180.99</span>
-					<del>￥199.71</del>
-				</div>
-				<div
-					class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-					<form action="#" method="post">
-						<fieldset>
-							<input type="hidden" name="cmd" value="_cart" /> <input
-								type="hidden" name="add" value="1" /> <input type="hidden"
-								name="business" value=" " /> <input type="hidden"
-								name="item_name" value="香水8" /> <input type="hidden"
-								name="amount" value="30.99" /> <input type="hidden" name="折扣"
-								value="1.00" /> <input type="hidden" name="currency_code"
-								value="RMB" /> <input type="hidden" name="return" value=" " />
-							<input type="hidden" name="cancel_return" value=" " /> <input
-								type="submit" name="submit" value="加入购物车" class="button" />
-						</fieldset>
-					</form>
-				</div>
-
-			</div>
-		</div>
-	</div>
+	</c:forEach>
+	<%
+	}
+	%>
 	<div class="clearfix"></div>
 </div>
+
 <!--香水商品结束-->
 
 <!--/grids 四个尾部小介绍-->

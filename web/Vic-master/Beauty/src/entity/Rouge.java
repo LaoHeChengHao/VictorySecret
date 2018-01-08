@@ -3,43 +3,51 @@ package entity;
 import java.util.Date;
 
 /**
- * ÊµÌåÀà
- * 2.¿Úºì
- * @author Ê©ÓàÔµ
+ * å®ä½“ç±»
+ * 2.å£çº¢
+ * @author æ–½ä½™ç¼˜
  *
  */
 public class Rouge {
-	private Integer rId; //'²úÆ·±àºÅ',
-	private String  rName;//'ÉÌÆ·Ãû³Æ',
-	private String  styleName;//'ÉÌÆ·¿îĞÍ',
-	private String  colour;// 'ÉÌÆ·ÑÕÉ«',
-	private Integer  inventory;//'ÉÌÆ·¿â´æ',
-	private Integer  sale;//'ÏúÊÛÁ¿',
-	private Integer  price;//'¼ÛÇ®',
-	private String  picture;//Í¼Æ¬Â·¾¶',
-	private Date  time ;//'ÉÏ¼ÜÊ±¼ä'
-	//ÎŞ²Î¹¹Ôì
+	private Integer rId; //1.äº§å“ç¼–å·,
+	private String  rName;//2.å•†å“å,
+	private String  styleName;//3.å•†å“æ¬¾å‹,
+	private String effect;//4.åŠŸæ•ˆ
+	private String  colour;//5.å•†å“é¢œè‰²,
+	private String brand;//6.å“ç‰Œ
+	private String NetWeight;//7.å‡€å«é‡
+	private Integer  inventory;//8.å•†å“åº“å­˜,
+	private Integer  sale;//9.é”€å”®é‡,
+	private Double  price;//10.ä»·é’±,
+	private String  picture;//11.ä¸»å›¾ç‰‡,
+	private Integer picturesId;//12.å¯¹åº”å›¾ç‰‡åº“æ•°æ®
+	private Date  time ;//13.ä¸Šæ¶æ—¶é—´
+	//æ— å‚æ„é€ ï¼Œæ–¹ä¾¿åå°„
 	public Rouge() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
-	//ÓĞ²Î¹¹Ôì
-	public Rouge(Integer rId, String rName, String styleName, String colour, Integer inventory, Integer sale,
-			Integer price, String picture, Date time) {
+	//å¸¦å‚æ„é€ ï¼Œæ–¹ä¾¿èµ‹å€¼
+	public Rouge(Integer rId, String rName, String styleName, String effect, String colour, String brand,
+			String netWeight, Integer inventory, Integer sale, Double price, String picture, Integer picturesId,
+			Date time) {
 		super();
 		this.rId = rId;
 		this.rName = rName;
 		this.styleName = styleName;
+		this.effect = effect;
 		this.colour = colour;
+		this.brand = brand;
+		NetWeight = netWeight;
 		this.inventory = inventory;
 		this.sale = sale;
 		this.price = price;
 		this.picture = picture;
+		this.picturesId = picturesId;
 		this.time = time;
 	}
 	/**
-	 * getºÍset·½·¨
-	 * get¶ÔÓ¦EL±í´ïÊ½È¡Öµ¹æ·¶
+	 * getå’Œsetæ–¹æ³•
+	 * getä¸ELè¡¨è¾¾å¼ä¸­ä½¿ç”¨çš„å±æ€§åä¿æŒä¸€è‡´
 	 * @return
 	 */
 	public Integer getrId() {
@@ -47,6 +55,24 @@ public class Rouge {
 	}
 	public void setrId(Integer rId) {
 		this.rId = rId;
+	}
+	public String getEffect() {
+		return effect;
+	}
+	public void setEffect(String effect) {
+		this.effect = effect;
+	}
+	public String getBrand() {
+		return brand;
+	}
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+	public String getNetWeight() {
+		return NetWeight;
+	}
+	public void setNetWeight(String netWeight) {
+		NetWeight = netWeight;
 	}
 	public String getrName() {
 		return rName;
@@ -78,10 +104,10 @@ public class Rouge {
 	public void setSale(Integer sale) {
 		this.sale = sale;
 	}
-	public Integer getPrice() {
+	public Double getPrice() {
 		return price;
 	}
-	public void setPrice(Integer price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
 	public String getPicture() {
@@ -90,17 +116,23 @@ public class Rouge {
 	public void setPicture(String picture) {
 		this.picture = picture;
 	}
+	public Integer getPicturesId() {
+		return picturesId;
+	}
+	public void setPicturesId(Integer picturesId) {
+		this.picturesId = picturesId;
+	}
 	public Date getTime() {
 		return time;
 	}
 	public void setTime(Date time) {
 		this.time = time;
 	}
-	//ÏÔÊ¾
 	@Override
 	public String toString() {
-		return "Rouge [rId=" + rId + ", rName=" + rName + ", styleName=" + styleName + ", colour=" + colour
-				+ ", inventory=" + inventory + ", sale=" + sale + ", price=" + price + ", picture=" + picture
+		return "Rouge [rId=" + rId + ", rName=" + rName + ", styleName=" + styleName + ", effect=" + effect
+				+ ", colour=" + colour + ", brand=" + brand + ", NetWeight=" + NetWeight + ", inventory=" + inventory
+				+ ", sale=" + sale + ", price=" + price + ", picture=" + picture + ", picturesId=" + picturesId
 				+ ", time=" + time + "]";
 	}
 	

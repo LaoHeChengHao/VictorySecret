@@ -3,39 +3,52 @@ package entity;
 import java.util.Date;
 
 /**
- * ÊµÌåÀà
- * 1.»¤·ôÆ·
- * @author Ê©ÓàÔµ
+ * å®ä½“ç±»
+ * 1.æŠ¤è‚¤
+ * @author æ–½ä½™ç¼˜
  *
  */
 public class Skin {
-	private Integer sId; //'²úÆ·±àºÅ',
-	private String  sName;//'ÉÌÆ·Ãû³Æ',
-	private String  styleName;//'ÉÌÆ·¿îĞÍ',
-	private String  colour;// 'ÉÌÆ·ÑÕÉ«',
-	private Integer  inventory;//'ÉÌÆ·¿â´æ',
-	private Integer  sale;//'ÏúÊÛÁ¿',
-	private Integer  price;//'¼ÛÇ®',
-	private String  picture;//Í¼Æ¬Â·¾¶',
-	private Date  time ;//'ÉÏ¼ÜÊ±¼ä'
-	//ÎŞ²Î¹¹Ôì£¬ÓÃÓÚ·´Éä
+	private Integer sId; //1.äº§å“ç¼–å·
+	private String  sName;//2.å•†å“å
+	private String  styleName;//3.å•†å“æ¬¾å‹,
+	private String  colour;// 4.å•†å“é¢œè‰²,
+	private String effect;//5.åŠŸæ•ˆ
+	private String brand;//6.å“ç‰Œ
+	private String NetWeight;//7.å‡€å«é‡
+	private Integer  inventory;//8.å•†å“åº“å­˜,
+	private Integer  sale;//9.é”€å”®é‡,
+	private Double  price;//10.ä»·é’±
+	private String  picture;//11.ä¸»å›¾ç‰‡
+	private Integer picturesId;//12.å¯¹åº”å›¾ç‰‡åº“æ•°æ®
+	private Date  time ;//13.ä¸Šæ¶æ—¶é—´
+	//æ— å‚æ„é€ 
 	public Skin() {
 		super();
 	}
-	//ÓĞ²Î¹¹Ôì£¬ÓÃÓÚ¸´ÖÆ
-	public Skin(Integer sId, String sName, String styleName, String colour, Integer inventory, Integer sale,
-			Integer price, String picture, Date time) {
+	//å¸¦å‚æ„é€ 
+	public Skin(Integer sId, String sName, String styleName, String colour, String effect, String brand,
+			String netWeight, Integer inventory, Integer sale, Double price, String picture, Integer picturesId,
+			Date time) {
 		super();
 		this.sId = sId;
 		this.sName = sName;
 		this.styleName = styleName;
 		this.colour = colour;
+		this.effect = effect;
+		this.brand = brand;
+		NetWeight = netWeight;
 		this.inventory = inventory;
 		this.sale = sale;
 		this.price = price;
 		this.picture = picture;
+		this.picturesId = picturesId;
 		this.time = time;
 	}
+	/**
+	 * getå’Œsetæ–¹æ³•
+	 * @return
+	 */
 	public Integer getsId() {
 		return sId;
 	}
@@ -50,6 +63,24 @@ public class Skin {
 	}
 	public String getStyleName() {
 		return styleName;
+	}
+	public String getEffect() {
+		return effect;
+	}
+	public void setEffect(String effect) {
+		this.effect = effect;
+	}
+	public String getBrand() {
+		return brand;
+	}
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+	public String getNetWeight() {
+		return NetWeight;
+	}
+	public void setNetWeight(String netWeight) {
+		NetWeight = netWeight;
 	}
 	public void setStyleName(String styleName) {
 		this.styleName = styleName;
@@ -72,10 +103,10 @@ public class Skin {
 	public void setSale(Integer sale) {
 		this.sale = sale;
 	}
-	public Integer getPrice() {
+	public Double getPrice() {
 		return price;
 	}
-	public void setPrice(Integer price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
 	public String getPicture() {
@@ -84,20 +115,24 @@ public class Skin {
 	public void setPicture(String picture) {
 		this.picture = picture;
 	}
+	public Integer getPicturesId() {
+		return picturesId;
+	}
+	public void setPicturesId(Integer picturesId) {
+		this.picturesId = picturesId;
+	}
 	public Date getTime() {
 		return time;
 	}
 	public void setTime(Date time) {
 		this.time = time;
 	}
-	/**
-	 * ÏÔÊ¾
-	 */
 	@Override
 	public String toString() {
-		return "Skin [sId=" + sId + ", sName=" + sName + ", styleName=" + styleName + ", colour=" + colour
-				+ ", inventory=" + inventory + ", sale=" + sale + ", price=" + price + ", picture=" + picture
-				+ ", time=" + time + "]";
+		return "Skin [sId=" + sId + ", sName=" + sName + ", styleName=" + styleName + ", colour=" + colour + ", effect="
+				+ effect + ", brand=" + brand + ", NetWeight=" + NetWeight + ", inventory=" + inventory + ", sale="
+				+ sale + ", price=" + price + ", picture=" + picture + ", picturesId=" + picturesId + ", time=" + time
+				+ "]";
 	}
 	
 	

@@ -18,12 +18,11 @@ public class BaseServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		String methodName = request.getParameter("method");
-		
+		Method method=null;
 		try {
-			Method method = this.getClass().getDeclaredMethod(methodName, HttpServletRequest.class,HttpServletResponse.class);
+			method = this.getClass().getDeclaredMethod(methodName, HttpServletRequest.class,HttpServletResponse.class);
 			method.setAccessible(true);
 			method.invoke(this, request,response);
-			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 

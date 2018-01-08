@@ -450,7 +450,7 @@ i.fa.fa-shopping-bag.top_logo_agile_bag {
 /*-- //nav-bar --*/
 
 
-/* Common styles for all menus */
+/* Common styles for all menus 导航栏*/
 
 .menu__list {
 	position: relative;
@@ -458,9 +458,10 @@ i.fa.fa-shopping-bag.top_logo_agile_bag {
 	display: flex;
 	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
-	margin: 0;
-	padding: 0;
+	margin: 0 auto;
+	padding-left: 180px;
 	list-style: none;
+	align:center;
 }
 
 .menu__item {
@@ -2092,7 +2093,7 @@ a.single-item {
 
 .login_resiger {
 	float: left;
-	padding-left: 168px;
+	padding-left: 160px;
 	padding-top: 18px;
 }
 

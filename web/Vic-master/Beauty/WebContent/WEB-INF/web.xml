@@ -9,16 +9,44 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
   <servlet>
-  	<servlet-name>UsersServlet</servlet-name>
-  	<servlet-class>servlet.UsersServlet</servlet-class>
+    <servlet-name>UsersServlet</servlet-name>
+    <servlet-class>servlet.UsersServlet</servlet-class>
   </servlet>
-  
   <servlet-mapping>
-  	<servlet-name>UsersServlet</servlet-name>
-  	<url-pattern>/UsersServlet</url-pattern>
+    <servlet-name>UsersServlet</servlet-name>
+    <url-pattern>/UsersServlet</url-pattern>
   </servlet-mapping>
-  
-  
+  <servlet>
+    <servlet-name>PerfumeServlet</servlet-name>
+    <servlet-class>servlet.PerfumeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PerfumeServlet</servlet-name>
+    <url-pattern>/PerfumeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>GoodServlet</servlet-name>
+    <servlet-class>servlet.GoodServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GoodServlet</servlet-name>
+    <url-pattern>/GoodServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SkinServlet</servlet-name>
+    <servlet-class>servlet.SkinServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SkinServlet</servlet-name>
+    <url-pattern>/SkinServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>RougeServlet</servlet-name>
+    <servlet-class>servlet.RougeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RougeServlet</servlet-name>
+    <url-pattern>/RougeServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

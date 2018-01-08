@@ -2,7 +2,8 @@
 	<named-config name="syydata">
 		<!-- 配置连接信息 -->
 		<property name="driverClass">com.mysql.jdbc.Driver</property>
-		<property name="jdbcUrl">jdbc:mysql://localhost:3306/victoria?characterEncoding=utf8</property>
+		<property name="jdbcUrl">jdbc:mysql://localhost:3306/victoria?characterEncoding=utf8
+		</property>
 		<property name="password">1996</property>
 		<property name="user">root</property>
 
@@ -19,6 +20,5 @@
 		<property name="maxStatements">5</property>
 
 		<property name="maxStatementsPerConnection">5</property>
-
 	</named-config>
 </c3p0-config>

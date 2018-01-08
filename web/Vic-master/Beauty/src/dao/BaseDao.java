@@ -13,74 +13,35 @@ import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 import utils.JDBCUtil;
 
-/**
- * ¹«¹²µÄÓ¦ÓÃÀà
- * ½øĞĞÊı¾İ¿âµÄÔöÉ¾¸Ä²é
- * ¿ÉÃæÏò¶à¸ö¶ÔÏó½øĞĞÔöÉ¾¸Ä²é,ËùÒÔĞèÓÃµ½·ºĞÍT
- * --´ø·ºĞÍµÄÊµÌåÀà
- * ±£Ö¤²»Í¬µÄÊµÌåÀà¼Ì³Ğ¸ÃÀà¿ÉÒÔ½øĞĞ²»Í¬µÄÊı¾İÔöÉ¾¸Ä²é
- * 
- * @author Ê©ÓàÔµ
- * 2017/12/28
- */
+
 public class BaseDao<T> {
-	//DBUtilÖĞµÄºËĞÄÀà
+
 	QueryRunner runn=new QueryRunner();
 	
 	
-	//ÊµÌåÀàµÄÀàĞÍ
+
 	private Class<T> type;
-	
-	/**
-	 * ×¢Òâ:¸ÃT½«¼Ì³ĞBaseDao,ÊôÓÚÆä×ÓÀà
-	 * ¶ø×ÓÀà½«»áµ÷ÓÃ¸¸ÀàµÄÎŞ²Î¹¹Ôì
-	 * ËùÒÔ´´½¨ÈçÏÂÎŞ²Î¹¹Ôì,ÔÚ±»µ÷ÓÃÊ±¸³Öµ
-	 * ÊµÏÖÊµÌåÀàÀàĞÍtypeµÄ¼ø¶¨
-	 */
-	//ÎŞ²Î¹¹Ôì
 	@SuppressWarnings("unchecked")
+	
 	public BaseDao(){
-		/**
-		 * Ê×ÏÈÒª»ñÈ¡µ½¼Ì³ĞBaseDaoµÄÊµÌåÀà
-		 * ÔÙ»ñÈ¡´ø·ºĞÍÀïÃæ¾ßÌåµÄÀà
-		 */
-		//ÈçUserDao extend BaseDao<User>
-		//1.»ñÈ¡µ±Ç°ÊµÌåÀà(UserDao)µÄ´ø·ºĞÍµÄ¸¸Àà(BaseDao)
-		//Type tp = this.getClass().getGenericSuperclass();
-		/**
-		 * TypeÎªÒ»¸ö½Ó¿Ú
-		 * ÆäÏÂÓĞ¶à¸öÊµÏÖÀà,ÆäÖĞÓĞ¸öParameteriedTypeÎª´ø·ºĞÍµÄÀà
-		 * ¿ÉÒÔÊµÏÖTµÄÒªÇó,¿ÉÒÔ½«Type»»³ÉParameterizedType
-		 * ´Ë´¦ĞèÒªÇ¿×ª(TypeÎªParameterizedTypeµÄÉÏ¼¶,´ó×ªĞ¡Ç¿×ª)
-		 */
-		//´Ë´¦ptÎª»ñÈ¡µ½BaseDao
+
 		ParameterizedType pt=(ParameterizedType) this.getClass().getGenericSuperclass();
-		
-		/**
-		 * »ñÈ¡´ø·ºĞÍÀïÃæ¾ßÌåµÄÀà
-		 * ·µ»ØÒ»¸öÊı×é
-		 * ÎÒÃÇĞèÒªµÄÊÇ´ø·ºĞÍµÄÀàÀïÃæµÄ¶ÔÏó,ÎªÒ»¸ö
-		 * ¶ø¸ÃÊı×éÆäÊµÖ»ÊÇ°üº¬Ò»¸öÊı¾İµÄÊı×é,Ö»ÄÜÈ¡µ½µÚÒ»¸ö
-		 * 
-		 */
+
 		Type[] types = pt.getActualTypeArguments();
-		//»ñÈ¡Ò»¸ö¶ÔÏó¾Í¿ÉÒÔ
+
 		this.type=(Class<T>) types[0];		
 	}
 	
 
-	/**
-	 * Í¨ÓÃµÄÔöÉ¾¸Ä²Ù×÷
-	 * Ê¹ÓÃDBUtilµÄquery()·½·¨
-	 */
+ 
 	public int update(String sql,Object...args){
 		int count=0;
-		//Á¬½ÓÊı¾İ¿â--Ö±½Óµ÷ÓÃÁ¬½ÓÊı¾İ¿âµÄ·½·¨
+
 		Connection conn=JDBCUtil.getConnection();
 		
-		//µ÷ÓÃºËĞÄÀàµÄupdate·½·¨
+
 		try {
-			//¸Ã·½·¨·µ»ØÖµÀàĞÍÎªint
+
 			count=runn.update(conn, sql, args);
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -91,24 +52,13 @@ public class BaseDao<T> {
 		
 	}
 	
-	/**
-	 * Í¨ÓÃµÄ²éÑ¯Ò»ÌõÊı¾İµÄ²Ù×÷
-	 * ½«Êı¾İ·ÅÈëÒ»¸ö¶ÔÏóÖĞ
-	 * ¸Ã¶ÔÏó¶àÃæÏò,Ê¹ÓÃT
-	 * Ê¹ÓÃDBUtilµÄupdate·½·¨
-	 */
+	
 	public T getBean(String sql,Object...args){
 		T t=null;
 		Connection conn=JDBCUtil.getConnection();
 
 		try {
-			//Ê¹ÓÃDBUtilµÄ·½·¨
-			/**
-			 * ÆäÖĞnew BeanHandler<T>(type)
-			 * T´ú±í²»Í¬µÄÊµÌåÀà,typeÎªÊµÌåÀàµÄÀàĞÍ
-			 * eg.new BeanHandler<User>(User.class)
-			 * ´Ë´¦ÓÃµ½·´ÉäºÍ·ºĞÍ
-			 */
+			
 			t=runn.query(conn, sql, new BeanHandler<T>(type), args);
 			
 		} catch (SQLException e) {
@@ -120,22 +70,15 @@ public class BaseDao<T> {
 		
 	}
 	
-	/**
-	 * Í¨ÓÃµÄ²éÑ¯¶àÌõÊı¾İµÄ²Ù×÷
-	 * ·µ»ØÒ»¸öList¼¯ºÏ
-	 * Ê¹ÓÃDBUtilµÄupdate()·½·¨
-	 */
+	
 	public List<T> getListBean(String sql,Object...args){
 		List<T> list=new ArrayList<T>();
-		//Á¬½ÓÊı¾İ¿â
+		//è¿æ¥æ•°æ®åº“
 		Connection conn=JDBCUtil.getConnection();
 		
-		//Ê¹ÓÃDBUtilÖĞµÄ·½·¨
+		
 		try {
-			/**
-			 * new BeanListHandler<T>(type)
-			 * ÓÃÓÚ²éÑ¯Êı¾İ¿â¶àÌõĞÅÏ¢µÄ½á¹û¼¯´æ´¢
-			 */
+			
 			list=runn.query(conn, sql, new BeanListHandler<T>(type), args);
 			
 		} catch (SQLException e) {

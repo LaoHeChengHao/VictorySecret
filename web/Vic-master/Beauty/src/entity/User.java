@@ -9,7 +9,7 @@ import java.util.Date;
  */
 public class User {
 	private Integer id;//
-	private String  userName;//
+	private String  userName;//用户名
 	private String password;//密码
 	private String email;//
 	private String telephone;//
