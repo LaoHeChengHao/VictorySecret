@@ -28,14 +28,14 @@
 								<div class="agile_inner_drop_nav_info">
 									<!--口红的小图标-->
 									<div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-										<a href="chun.jsp"><img src="images/top2.jpg" alt=" " /></a>
+										<a href="RougeServlet?method=showAllRouge"><img src="images/top2.jpg" alt=" " /></a>
 									</div>
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="chun.jsp">口红</a></li>
-											<li><a href="chun.jsp">唇彩</a></li>
-											<li><a href="chun.jsp">唇釉</a></li>
-											<li><a href="chun.jsp">唇膏</a></li>
+											<li><a href="RougeServlet?method=showAllRouge">口红</a></li>
+											<li><a href="RougeServlet?method=showAllRouge">唇彩</a></li>
+											<li><a href="RougeServlet?method=showAllRouge">唇釉</a></li>
+											<li><a href="RougeServlet?method=showAllRouge">唇膏</a></li>
 										</ul>
 									</div>
 									<div class="clearfix"></div>
@@ -52,20 +52,20 @@
 								<div class="agile_inner_drop_nav_info">
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="body.jsp">护手霜</a></li>
-											<li><a href="body.jsp">身体乳</a></li>
+											<li><a href="SkinServlet?method=showAllSkin">面霜</a></li>
+											<li><a href="SkinServlet?method=showAllSkin">身体乳</a></li>
 										</ul>
 									</div>
 									<!--护肤的小图标-->
 									<div class="col-sm-6 multi-gd-img multi-gd-text ">
-										<a href="body.jsp"><img src="images/top1.jpg" alt=" " /></a>
+										<a href="SkinServlet?method=showAllSkin"><img src="images/top1.jpg" alt=" " /></a>
 									</div>
 									<div class="clearfix"></div>
 								</div>
 							</ul></li>
 						<!--香水-->
 						<li class=" menu__item"><a class="menu__link"
-							href="xiang.jsp">香水 </a></li>
+							href="PerfumeServlet?method=showAllPerfume">香水 </a></li>
 						<!-- 链接到另外两个门店 -->
 						<li class=" menu__item"><a class="menu__link"
 							href="#" style="color:red;">内衣馆 </a></li>

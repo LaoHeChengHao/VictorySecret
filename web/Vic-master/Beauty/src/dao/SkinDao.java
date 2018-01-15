@@ -2,6 +2,7 @@ package dao;
 
 import java.util.List;
 
+import entity.Rouge;
 import entity.Skin;
 
 /**
@@ -17,6 +18,9 @@ public interface SkinDao {
 			//显示最新上市的八种护肤信息
 			List<Skin> getEightSkin();
 			
-			//显示单个香水信息
+			//显示单个护肤信息
 			Skin getOneSkin(Skin skin);
+			
+			//显示指定id的护肤信息
+			Skin getSkinById(int sid);
 }

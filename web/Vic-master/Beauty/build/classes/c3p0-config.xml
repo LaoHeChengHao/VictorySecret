@@ -15,7 +15,7 @@
 		<!-- 池子中最小的连接数量 -->
 		<property name="minPoolSize">10</property>
 		<!-- 池子中最大的连接数量 -->
-		<property name="maxPoolSize">20</property>
+		<property name="maxPoolSize">50</property>
 		<!-- 最大的statement的数量 -->
 		<property name="maxStatements">5</property>
 

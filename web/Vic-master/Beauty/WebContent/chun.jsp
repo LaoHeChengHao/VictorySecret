@@ -156,19 +156,20 @@
 								src="${rouge.picture}" alt="" class="pro-image-back">
 							<div class="men-cart-pro">
 								<div class="inner-men-cart-pro">
-									<a href="single.jsp" class="link-product-add-cart">快速查看</a>
+									<a href="GoodServlet?method=showOneGood&id=${rouge.rId}" class="link-product-add-cart">快速查看</a>
 								</div>
 							</div>
-							<span class="product-new-top">New</span>
+							<!-- <span class="product-new-top">New</span> -->
 
 						</div>
 						<div class="item-info-product ">
 							<h4>
-								<a href="single.jsp">${rouge.styleName}</a>
+								<a href="GoodServlet?method=showOneGood&id=${rouge.rId}">${rouge.styleName}</a>
 							</h4>
 							<div class="info-product-price">
 								<span class="item_price">￥${rouge.price}</span>
 							</div>
+							<div><a href="RougeCommentServlet?method=showAllRougeComment&id=${rouge.rId}">在线评论</a></div>
 							<div
 								class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
 								<form action="#" method="post">

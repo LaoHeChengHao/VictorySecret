@@ -20,7 +20,7 @@ public class Perfume {
 	private Integer  sale;//9.销售量
 	private Double  price; //10.价钱
 	private String picture;//11主图片
-	private Integer picturesId;//12.对应图片库数据
+	private String picturesId;//12.对应图片库数据
 	private Date time;//13.上架时间
 	//无参构造
 	public Perfume() {
@@ -30,7 +30,7 @@ public class Perfume {
 	//带参构造
 	
 	public Perfume(Integer pId, String pName, String styleName, String colour, String type, String brand,
-			String netWeight, Integer inventory, Integer sale, Double price, String picture, Integer picturesId,
+			String netWeight, Integer inventory, Integer sale, Double price, String picture, String picturesId,
 			Date time) {
 		super();
 		this.pId = pId;
@@ -121,10 +121,10 @@ public class Perfume {
 	public void setPicture(String picture) {
 		this.picture = picture;
 	}
-	public Integer getPicturesId() {
+	public String getPicturesId() {
 		return picturesId;
 	}
-	public void setPicturesId(Integer picturesId) {
+	public void setPicturesId(String picturesId) {
 		this.picturesId = picturesId;
 	}
 	public Date getTime() {

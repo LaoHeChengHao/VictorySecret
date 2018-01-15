@@ -3,6 +3,7 @@ package dao;
 import java.util.List;
 
 import entity.Perfume;
+import entity.Rouge;
 
 /**
  * dao层
@@ -19,5 +20,8 @@ public interface PerfumeDao {
 	
 	//显示单个香水信息
 	Perfume getOnePerfume(Perfume perfume);
+	
+	//显示指定id的口红信息
+	Perfume getPerfumeById(int pid);
 
 }

@@ -35,9 +35,19 @@ public class RougeDaoImpl extends BaseDao<Rouge> implements RougeDao{
 
 	@Override
 	public Rouge getOneRouge(Rouge rouge) {
-		String sql="select * from Rouge where pId=?";
+		String sql="select * from Rouge where rId=?";
 		Rouge bean = this.getBean(sql, rouge.getrId());
 		return bean;
+	}
+
+	/**
+	 * 根据id查找出该口红信息
+	 */
+	@Override
+	public Rouge getRougeById(int rid) {
+		String sql="select * from Rouge where rId=?";
+		Rouge rouge = this.getBean(sql, rid);
+		return rouge;
 	}
 
 }

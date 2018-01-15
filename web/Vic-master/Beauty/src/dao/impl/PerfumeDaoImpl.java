@@ -41,4 +41,15 @@ public class PerfumeDaoImpl extends BaseDao<Perfume> implements PerfumeDao{
 		return bean;
 	}
 
+	/**
+	 * dao层
+	 * 实现查询出指定id的香水信息
+	 */
+	@Override
+	public Perfume getPerfumeById(int pid) {
+		String sql="select * from Perfume where pId=?";
+		Perfume perfume = this.getBean(sql, pid);
+		return perfume;
+	}
+
 }

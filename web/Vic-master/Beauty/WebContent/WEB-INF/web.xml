@@ -49,4 +49,20 @@
     <servlet-name>RougeServlet</servlet-name>
     <url-pattern>/RougeServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>CommentServlet</servlet-name>
+    <servlet-class>servlet.CommentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CommentServlet</servlet-name>
+    <url-pattern>/CommentServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>PerfumeCommentServlet</servlet-name>
+    <servlet-class>servlet.PerfumeCommentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PerfumeCommentServlet</servlet-name>
+    <url-pattern>/PerfumeCommentServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

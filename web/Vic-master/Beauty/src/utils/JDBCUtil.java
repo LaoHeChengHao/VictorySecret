@@ -11,7 +11,10 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 
 public class JDBCUtil {
-
+	/**
+	 * 连接数据库
+	 * @return
+	 */
 	public static Connection getConnection(){
 		Connection conn=null;
 		DataSource dataSource = new ComboPooledDataSource("syydata");
@@ -24,7 +27,12 @@ public class JDBCUtil {
 		
 	}
 	
-	
+	/**
+	 * 关闭数据库
+	 * @param rs
+	 * @param ps
+	 * @param conn
+	 */
 	public static void closeConnection(ResultSet rs,PreparedStatement ps,Connection conn){
 		if(rs!=null){
 			try {

@@ -36,7 +36,7 @@ function login()
 	{
 		$check2.text("密码不能为空!");
 		return;
-	}else if($password.trim().length<6){
+	}else if($password.trim().length<4){
 		$check2.text("密码不符合规定!");
 		return;
 	}else
@@ -55,16 +55,16 @@ function login()
 	<!--User-Login-->
 	<h1>用户登录</h1>
 	<div class="avtar">
-		<img src="images/log_pic.jpg" />
+		<img src="images/logo.jpg" />
 	</div>
 	<div class="login-form" style="width: 600px;height: 355px;">
 		<form action="UsersServlet?method=login" method="post" id="form">
-			<div id="msg"></div>
+			<div id="msg"><%=request.getAttribute("msg")==null? "请输入用户名和密码": request.getAttribute("msg")%></div>
 			<div class="form-text" > 
-				用户名：<input id="userName"  name="userName"  type="text" placeholder="用户名4个字符以上"/>
-				<div class="notes"><span id="check" style="font-size: 10px"></span></div>
-				密&nbsp;&nbsp;码：<input id="password" name="password"  type="password" placeholder="密码4个字符以上"/>
-				<div class="notes"><span id="check2" style="font-size: 10px"></span></div>
+				用户名：<input id="userName"  name="userName"  type="text" placeholder="用户名2个字符以上"/>
+				<div id="check" style="font-size: 10px" align="center"></div>
+				密&nbsp;&nbsp;&nbsp;码：<input id="password" name="password"  type="password" placeholder="密码4个字符以上"/>
+				<div class="notes"><div id="check2" style="font-size: 10px"></div></div>
 			</div>
 			<div class="form-text1">
 			<input type="button" value="登录" onclick="login()" class="btn-login">
@@ -74,9 +74,9 @@ function login()
 	</div>
 	<!--/User-Login-->
 	<!--start-copyright-->
-	<div class="copy-right">
-		<p>版权所有</p><span>施余缘</span>
-	</div>
+	<!-- <div class="copy-right">
+		<p>版权所有</p><span>Victoria</span>
+	</div> -->
 	<!--//end-copyright-->
 </body>
 </html>

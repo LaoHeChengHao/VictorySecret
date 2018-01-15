@@ -3,9 +3,9 @@ package dao.impl;
 import java.util.List;
 
 import dao.BaseDao;
-import dao.CommentDao;
-import entity.Comment;
-import entity.Perfume;
+import dao.PerfumeCommentDao;
+import entity.CommentDetail;
+import entity.PerfumeComment;
 
 /**
  * DAO层
@@ -13,16 +13,16 @@ import entity.Perfume;
  * @author 施余缘
  *
  */
-public class PerfumeCommentDaoImpl	extends BaseDao<Comment> implements CommentDao{
+public class PerfumeCommentDaoImpl	extends BaseDao<CommentDetail> implements PerfumeCommentDao{
 
 	/**
-	 * 查找出关于香水的评论
+	 * 根据商品id查找出关于香水的评论
 	 * 
 	 */
 	@Override
-	public List<Comment> selectAllComment(Comment comment) {
-		String sql="select * from pcomment where gid=?";
-		List<Comment> listBean = this.getListBean(sql, comment.getgId());
+	public List<CommentDetail> selectAllPerfumeComment(Integer pcomment) {
+		String sql="select * from pcomment where gid= ?";
+		List<CommentDetail> listBean = this.getListBean(sql, pcomment);
 		return listBean;
 	}
 
@@ -30,9 +30,9 @@ public class PerfumeCommentDaoImpl	extends BaseDao<Comment> implements CommentDa
 	 * 新增香水的评论
 	 */
 	@Override
-	public int addComment(Comment comment) {
-		String sql="insert into pcomment(cId,Content,uId,gId) values (?,?,?,?)";
-		int addPerfumeComment = this.update(sql,comment.getcId(),comment.getContent(),comment.getuId(), comment.getgId());
+	public int addPerfumeComment(CommentDetail pcomment) {
+		String sql="insert into pcomment(Content,uId,gId) values (?,?,?)";
+		int addPerfumeComment = this.update(sql,pcomment.getContent(),pcomment.getuId(), pcomment.getgId());
 		return addPerfumeComment;
 	}
 

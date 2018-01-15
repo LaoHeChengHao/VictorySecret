@@ -1,53 +1,51 @@
 package entity;
 
+import java.util.List;
+
 /**
  * 评论实体类
+ * 承载三种商品的评论
+ * 主要存放没类商品的全部评价
+ * 在使用时，经过判断，取出不同商品的评价
+ * 
  * @author 施余缘
  *
  */
 public class Comment {
-	private Integer cId;//评论编号
-	private String content;//评论内容
-	private Integer uId;//评论人的编号
-	private Integer gId;//评论商品的编号
-	public Integer getcId() {
-		return cId;
+	private List<PerfumeComment> pComment;//获取所有香水评论
+	private List<SkinComment> sComment;//获取所有护肤品评论
+	private List<RougeComment> rComment;//获取所有口红评论
+	public List<PerfumeComment> getpComment() {
+		return pComment;
 	}
-	public void setcId(Integer cId) {
-		this.cId = cId;
+	public void setpComment(List<PerfumeComment> pComment) {
+		this.pComment = pComment;
 	}
-	public String getContent() {
-		return content;
+	public List<SkinComment> getsComment() {
+		return sComment;
 	}
-	public void setContent(String content) {
-		this.content = content;
+	public void setsComment(List<SkinComment> sComment) {
+		this.sComment = sComment;
 	}
-	public Integer getuId() {
-		return uId;
+	public List<RougeComment> getrComment() {
+		return rComment;
 	}
-	public void setuId(Integer uId) {
-		this.uId = uId;
+	public void setrComment(List<RougeComment> rComment) {
+		this.rComment = rComment;
 	}
-	public Integer getgId() {
-		return gId;
-	}
-	public void setgId(Integer gId) {
-		this.gId = gId;
+	public Comment(List<PerfumeComment> pComment, List<SkinComment> sComment, List<RougeComment> rComment) {
+		super();
+		this.pComment = pComment;
+		this.sComment = sComment;
+		this.rComment = rComment;
 	}
 	public Comment() {
 		super();
-		// TODO Auto-generated constructor stub
-	}
-	public Comment(Integer cId, String content, Integer uId, Integer gId) {
-		super();
-		this.cId = cId;
-		this.content = content;
-		this.uId = uId;
-		this.gId = gId;
 	}
 	@Override
 	public String toString() {
-		return "Comment [cId=" + cId + ", content=" + content + ", uId=" + uId + ", gId=" + gId + "]";
+		return "Comment [pComment=" + pComment + ", sComment=" + sComment + ", rComment=" + rComment + "]";
 	}
+	
 	
 }

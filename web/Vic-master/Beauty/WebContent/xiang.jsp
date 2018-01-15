@@ -16,6 +16,7 @@
 	//使用service层中的方法，获取所有香水信息
 	List<Perfume> allPerfume = per.getAllPerfume();
 %>
+<body>
 <!-- banner 导航分类栏-->
 <div class="ban-top">
 	<div class="container">
@@ -163,7 +164,7 @@
 							<img src="${perfume.picture}" alt="" class="pro-image-back">
 							<div class="men-cart-pro">
 								<div class="inner-men-cart-pro">
-									<a href="xiang.jsp" class="link-product-add-cart">快速 查看</a>
+									<a href="GoodServlet?method=showOneGood&id=${perfume.pId}" class="link-product-add-cart">快速 查看</a>
 								</div>
 							</div>
 							<span class="product-new-top">New</span>
@@ -171,11 +172,12 @@
 						<div class="item-info-product ">
 							<h4>
 								<a
-									href="PerfumeServlet?method=showOnePerfume&pId=${perfume.pId}">${perfume.styleName}</a>
+									href="GoodServlet?method=showOneGood&id=${perfume.pId}">${perfume.styleName}</a>
 							</h4>
 							<div class="info-product-price">
 								<span class="item_price">￥${perfume.price}</span>
 							</div>
+							<div><a href="PerfumeCommentServlet?method=showAllPerfumeComment&id=${perfume.pId}">查看评论</a></div>
 							<div
 								class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
 								<form action="#" method="post">
@@ -264,7 +266,7 @@
 <!-- //footer -->
 
 <!-- login -->
-<div class="modal fade" id="myModal4" tabindex="-1" role="dialog"
+<!-- <div class="modal fade" id="myModal4" tabindex="-1" role="dialog"
 	aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content modal-info">
@@ -343,7 +345,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 <!-- //login -->
 <a href="#home" class="scroll" id="toTop" style="display: block;"> <span
 	id="toTopHover" style="opacity: 1;"> </span>

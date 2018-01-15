@@ -17,7 +17,10 @@ public interface RougeDao {
 		//显示最新上市的八种口红信息
 		List<Rouge> getEightRouge();
 		
-		//显示单个香水信息
+		//显示单个口红信息
 		Rouge getOneRouge(Rouge rouge);
+		
+		//显示指定id的口红信息
+		Rouge getRougeById(int rid);
 
 }

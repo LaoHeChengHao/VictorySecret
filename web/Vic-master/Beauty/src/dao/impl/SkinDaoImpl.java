@@ -4,6 +4,7 @@ import java.util.List;
 
 import dao.BaseDao;
 import dao.SkinDao;
+import entity.Perfume;
 import entity.Rouge;
 import entity.Skin;
 
@@ -40,9 +41,20 @@ public class SkinDaoImpl extends BaseDao<Skin> implements SkinDao{
 	 */
 	@Override
 	public Skin getOneSkin(Skin skin) {
-		String sql="select * from Rouge where pId=?";
+		String sql="select * from skin where sId=?";
 		Skin bean = this.getBean(sql, skin.getsId());
 		return bean;
+	}
+
+	/**
+	 * dao层
+	 * 实现根据id查询出护肤信息
+	 */
+	@Override
+	public Skin getSkinById(int sid) {
+		String sql="select * from Skin where sId=?";
+		Skin skin = this.getBean(sql, sid);
+		return skin;
 	}
 
 }

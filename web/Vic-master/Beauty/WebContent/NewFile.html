@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>.html</title>
+<style>
+* {
+	margin: 0;
+	padding: 0
+}
+
+#baidu {
+	width: 35%;
+	margin: 20px auto
+}
+
+.comment {
+	display: block;
+	cursor: pointer;
+	color: #369
+}
+
+hr {
+	width: 98%;
+	color: #ccc;
+	margin: 0 0 5px 0;
+}
+
+.comment_list {
+	border: 1px solid #ccc;
+	padding: 0 5px;
+}
+
+.public {
+	border: 1px solid #ccc;
+	padding: 0 5px;
+	display: none;
+}
+
+.txt {
+	width: 96%;
+	margin: 5px 0 0 5px;
+}
+
+.pluc {
+	width: 98%;
+	text-align: right;
+}
+
+.btn {
+	width: 50px;
+	cursor: pointer
+}
+</style>
+<script src="jquery-1.7.2.min.js"></script>
+<script>
+$(function(){
+var div=$("div");
+for(var i=0;i<div.length;i++){
+var a=$("<span class='comment'>0条评论</span><hr><div class='comment_list'></div><div class='public'></div>");//注意：这个a变量必须在for里面
+div.eq(i).append(a);
+} //if(!$("div").has("form").length){}表示当div里form个数为0的话，就。。。
+$(".comment").each(function(index,value){
+$(this).on("click",function(){
+if(!$(".public").eq(index).has("form").length){//如果里面还没有添加进来
+$.ajax({
+type:"post",
+url:"",
+beforeSend:function(){//发送之后，成功之前
+$(".public").eq(index).append("<dl class='loadding'><dd>正在加载评论</dd></dl>");
+}
+success:function(data){
+$(".public").eq(index).find("loadding").hide();//加载成功之后把它隐藏起来
+//然后解析反回来的数据,显示在对应的主题下方
+$("data").each(function(index,value){
+$(".comment_list").eq(index).append("<dl><dt class='who'>"+value.user+"</dt><dd>"+value.comment+"</dd><dd='date'>"+value.date+"</dd><hr></dl>");	
+}); //然后显示发表区
+$(".public").eq(index).append("<form><textarea class='txt'></textarea><p class='pluc'><button class='btn'>发表</button></p></form>");
+//然后，当点击发表按钮的时候，发送ajax表单请求
+$(".public").eq(index).find(".btn").click(function(){
+$.ajax({
+type:'post',
+url:'',
+data:$($(".public").eq(index).find("form")).serialize()，
+success：function(data){
+if (data) {
+$(_this).button('enable');
+$('#loading').css('background', 'url(img/success.gif) no-repeat 20px center').html('数据新增成功...');
+} 
+}	
+});
+
+});
+}
+});
+
+if($(".public").eq(index).is(':hidden')){
+$(".public").eq(index).show();
+}else{
+$(".public").eq(index).hide();
+}
+}
+
+
+});
+});
+});
+
+</script>
+</head>
+<body>
+	<div id="baidu">
+		<div class="one">百度联盟内容生态亮相魔都 以内容引爆流量价值</div>
+
+		<div class="two">百度糯米影业打通影视和生活服务消费市场</div>
+
+		<div class="three">人工智能让营销更懂人心 百度接连斩获营销界实力大奖</div>
+	</div>
+
+</body>
+</html>

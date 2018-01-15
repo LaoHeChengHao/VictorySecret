@@ -2,7 +2,8 @@ package service;
 
 import java.util.List;
 
-import entity.Comment;
+import entity.CommentDetail;
+import entity.PerfumeComment;
 
 /**
  * service层
@@ -12,8 +13,8 @@ import entity.Comment;
  */
 public interface PerfumeCommentService {
 		//查找出指定商品的所有评论信息
-		List<Comment> showAllComment(Comment comment);
+		List<CommentDetail> showAllPerfumeComment(Integer gId);
 		
 		//增加评论信息
-		boolean addComment(Comment comment);
+		boolean addPerfumeComment(CommentDetail pComment);
 }

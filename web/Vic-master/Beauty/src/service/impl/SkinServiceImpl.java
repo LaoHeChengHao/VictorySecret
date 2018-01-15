@@ -4,6 +4,7 @@ import java.util.List;
 
 import dao.SkinDao;
 import dao.impl.SkinDaoImpl;
+import entity.Rouge;
 import entity.Skin;
 import service.SkinService;
 
@@ -37,6 +38,20 @@ public class SkinServiceImpl implements SkinService {
 	@Override
 	public Skin showOneSkin(Skin skin) {
 		return sdi.getOneSkin(skin);
+	}
+
+	/**
+	 * 
+	 */
+	@Override
+	public boolean findSkinById(int sId) {
+		Skin skinById = sdi.getSkinById(sId);
+		return skinById!=null;//不等于null,表示数据库中有这个id
+	}
+
+	@Override
+	public Skin findSById(int sId) {
+		return sdi.getSkinById(sId);
 	}
 
 }

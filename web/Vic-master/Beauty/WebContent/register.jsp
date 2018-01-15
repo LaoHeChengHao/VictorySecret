@@ -12,16 +12,22 @@
 <script type="text/javascript">
 	function register() {
 		var nametip=checkUserName();
+		alert(nametip);
 		var passtip=checkPassword();
+		/* alert(passtip); */
 		var repasstip=checkRepass();
+		/* alert(repasstip); */
 		var emailtip=checkEmail();
+		/* alert(emailtip); */
 		var teltip=checkTel();
-		if(nametip && passtip && repasstip && emailtip && teltip){
+		/* alert(teltip); */
+		/* System.out.println("显示："+nametip+","+passtip+","+repasstip+","+emailtip+","+teltip); */
+		 if(nametip!=false &&passtip && repasstip && emailtip && teltip){ 
 		//验证表单通过,接下来提交表单
 			$("#form").submit();
-		}else{
-			alert("请核对信息");
-		}
+		}else{ 
+			 alert("请核对信息");
+		 } 
 		/* return nametip && passtip && repasstip && emailtip && teltip;*/	
 	}
 	/* 验证用户名 */
@@ -33,56 +39,34 @@
 			check1.text("用户名不能为空或少于两位字符");
 			return false; 
 		}else if(userName!=null){
-			 check1.text(""); 
-			//Ajax实现
-			//1.获取XMLHTTPRequest对象
-			//专门写个createXMLHttPRequest方法来获取
-			var req=createXMLHttpRequest();
-			//2.准备URL 数据 
-			var url="/Beauty/UsersServlet?method=checkUserName & t="+Math.radom();
-			var data="userName="+userName;
-			//不写默认为ture，为异步
-			//设置请求信息 请求信息的提交方式，信息地址和
-			req.open("POST",url);
-			//3.使用回调函数
-			req.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-			req.onreadystatechange=callback;
-			//4.发送请求
-			req.send(data);
-			/* 使用POST方式发送请求
-			var url = "userServlet";//服务器端URL地址
-			xmlHttpRequest.open("POST", url, true);
-			xmlHttpRequest.setRequestHeader("Content-Type",
-					"application/x-www-form-urlencoded");
-			var data = "name=" + name;//需要发送的数据信息,name为用户名文本框获取的值
-			xmlHttpRequest.send(data);
-			*/
+			//异步提交请求,携带参数
+			$.ajax({
+				"url":"http://localhost:8080/Beauty/UsersServlet?method=checkUserName",
+				"type":"get",
+				"async":"true",
+				"data":{"userName":userName},//提交参数方式: 一种,采用字符串拼接的方式组装成 键值对参数形式.
+				"success":callBack,      //二种,可以是JSon对象的形式(也是一种key:value形式).
+				"dataType":"json",//注意，此处犯过错误，Servlet中传递的是json字符串，此处不能使用text
+				"error":function()
+						{
+							alert("服务器响应失败!");
+						}
+			});
+			 /* check1.text("进入Ajax"); */
 			//Ajax 回调函数
-			function callback() {
-				if (req.readyState == 4 && req.status == 200) {
-					var data = req.responseText;
-					if (data == "true") {
-						check1.text("用户名已被使用！");
+			function callBack(user) {
+				    /*	当用户名存在时，不可注册  */
+					if (user!= true) {
+						check1.text("用户名已被使用,请重新输入");
 						return false;
-					} else {
-						check1.text("用户名可以使用！");
+					} else if(user== true){
+						check1.text("OK");
 						return true;
 					}
-				}
-			}
-		}
-	}
-	//获取XMLHttpRequest对象
-	 function createXMLHttpRequest(){
-		 //1.如果当前浏览器为IE6以上浏览器或者其他浏览器
-		 if(window.XMLHttpRequest){
-			 return new XMLHttpRequest();
-		 }else{
-			 //2.如果当前浏览器为IE6以下浏览器
-			 return new ActiveXObject("Microsoft.XMLHTTP");
-		 }
-		 
-	 }
+			}//end callback
+		}//end else
+	}//end checkUserName
+	
 	/* 验证密码 */
 	function checkPassword(){
 		var $check2 = $("#check2");
@@ -175,7 +159,7 @@
 					pattern="^[a-z0-9_-]{3,16}$/" 
 					onblur="checkUserName()" oninput="checkUserName()"/>
 				</td>
-				<td id="check1"></td>
+				<td id="check1" width="120px"></td>
 			</tr>
 			<tr>
 				<td>密码</td>
@@ -184,7 +168,7 @@
 					placeholder="必须大于5位" required="required"  
 					onblur="checkPassword()" oninput="checkPassword()"/>
 				</td>
-				<td id="check2"></td>
+				<td id="check2" width="120px"></td>
 			</tr>
 			<tr>
 				<td>再次输入密码</td>
@@ -193,7 +177,7 @@
 					placeholder="请与第一次输入保持一致" required="required" 
 					 onblur="checkRepass()" oninput="checkRepass()"/>
 				</td>
-				<td id="check3"></td>
+				<td id="check3" width="120px"></td>
 			</tr>
 			<tr>
 				<td>email</td>
@@ -202,7 +186,7 @@
 					placeholder="XXX@XXX.XX" required="required" 
 					 onblur="checkEmail()" oninput="checkEmail()"/>
 				</td>
-				<td id="check4"></td>
+				<td id="check4" width="120px"></td>
 			</tr>
 			<tr>
 				<td>电话号码</td>
@@ -211,7 +195,7 @@
 					placeholder="输入正确格式的手机号" required="required"
 					maxlength="11"  onblur="checkTel()" oninput="checkTel()"/>
 				</td>
-				<td id="check5"></td>
+				<td id="check5" width="120px"></td>
 			</tr>
 			<tr>
 				<td colspan="2" align="center">

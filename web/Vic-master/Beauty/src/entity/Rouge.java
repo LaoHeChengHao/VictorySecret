@@ -20,7 +20,7 @@ public class Rouge {
 	private Integer  sale;//9.销售量,
 	private Double  price;//10.价钱,
 	private String  picture;//11.主图片,
-	private Integer picturesId;//12.对应图片库数据
+	private String picturesId;//12.对应图片库数据
 	private Date  time ;//13.上架时间
 	//无参构造，方便反射
 	public Rouge() {
@@ -28,7 +28,7 @@ public class Rouge {
 	}
 	//带参构造，方便赋值
 	public Rouge(Integer rId, String rName, String styleName, String effect, String colour, String brand,
-			String netWeight, Integer inventory, Integer sale, Double price, String picture, Integer picturesId,
+			String netWeight, Integer inventory, Integer sale, Double price, String picture, String picturesId,
 			Date time) {
 		super();
 		this.rId = rId;
@@ -116,10 +116,10 @@ public class Rouge {
 	public void setPicture(String picture) {
 		this.picture = picture;
 	}
-	public Integer getPicturesId() {
+	public String getPicturesId() {
 		return picturesId;
 	}
-	public void setPicturesId(Integer picturesId) {
+	public void setPicturesId(String picturesId) {
 		this.picturesId = picturesId;
 	}
 	public Date getTime() {

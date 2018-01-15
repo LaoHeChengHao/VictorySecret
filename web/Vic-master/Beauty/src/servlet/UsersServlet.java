@@ -7,6 +7,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.alibaba.fastjson.JSON;
+
 import entity.User;
 import service.UserService;
 import service.impl.UserServiceImpl;
@@ -103,27 +105,28 @@ public class UsersServlet  extends BaseServlet {
 	 */
 	protected void checkUserName(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		//从页面中获取用户填入的用户名
 		String userName = request.getParameter("userName");
+		//使用方法获取数据库中的用户名的对象
 		User userByOne = userService.getUserByOne(userName);
-		System.out.println("显示："+userByOne);
-		String tag = "";
-		if(userByOne.getUserName()== null)
+		/*System.out.println("显示："+userByOne);*/
+		boolean tag = false;
+		if(userByOne== null)
 		{
 			//用户名不存在，可以使用
-			tag = "true";
+			tag = true;
 		}
 		else
 		{
 			//用户名存在，不可以使用
-			tag = "false";
+			tag = false;
 		}
-		
+		//写入Ajax流中
 		PrintWriter out = response.getWriter();
-		out.print(tag);
+		out.print(JSON.toJSONString(tag));
+		System.out.println(tag);
 		out.flush();
 		out.close();
-		
-		
 	}
 	
 	

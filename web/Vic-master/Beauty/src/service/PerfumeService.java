@@ -19,4 +19,10 @@ public interface PerfumeService {
 		
 		//显示单个香水信息
 		Perfume showOnePerfume(Perfume perfume);
+		
+		//查找数据库中是否包含指定id的商品
+		boolean findPerfumeById(int pId);
+		
+		//查找出指定id的商品
+		Perfume findPById(int pId);
 }

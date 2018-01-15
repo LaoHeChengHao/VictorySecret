@@ -4,6 +4,7 @@ import java.util.List;
 
 import dao.impl.PerfumeDaoImpl;
 import entity.Perfume;
+import entity.Rouge;
 import service.PerfumeService;
 
 public class PerfumeServiceImpl  implements PerfumeService{
@@ -32,6 +33,24 @@ public class PerfumeServiceImpl  implements PerfumeService{
 	@Override
 	public Perfume showOnePerfume(Perfume perfume) {
 		return pdi.getOnePerfume(perfume);
+	}
+
+	/**
+	 * 实现根据id判断数据库中是否存在该id
+	 */
+	@Override
+	public boolean findPerfumeById(int pId) {
+		Perfume perfumeById = pdi.getPerfumeById(pId);
+		return perfumeById!=null;//不等于null,表示数据库中有这个id
+	}
+
+	/**
+	 * 实现根据id查找出数据
+	 */
+	@Override
+	public Perfume findPById(int pId) {
+		Perfume perfumeById = pdi.getPerfumeById(pId);
+		return perfumeById ;
 	}
 
 }

@@ -186,7 +186,7 @@
 		<!--第一张-->
 		<div class="col-md-5 bb-grids bb-left-agileits-w3layouts">
 
-			<a href="womens.jsp">
+			<a href="#">
 				<div class="bb-left-agileits-w3layouts-inner grid">
 					<figure class="effect-roxy"> <img src="images/bb1.jpg"
 						alt=" " class="img-responsive" /> <figcaption>
@@ -200,7 +200,7 @@
 
 		<div class="col-md-7 bb-grids bb-middle-agileits-w3layouts">
 			<!--第二张-->
-			<a href="chun.jsp">
+			<a href="#">
 				<div class="bb-middle-agileits-w3layouts grid">
 					<figure class="effect-roxy"> <img src="images/bottom3.jpg"
 						alt=" " class="img-responsive" /> <figcaption>
@@ -213,7 +213,7 @@
 		</div>
 		<div class="col-md-7 bb-grids bb-middle-agileits-w3layouts">
 			<!--第三张-->
-			<a href="chun.jsp">
+			<a href="#">
 				<div class="bb-middle-agileits-w3layouts grid" id="three">
 					<figure class="effect-roxy"> <img src="images/bottom4.jpg"
 						alt=" " class="img-responsive" /> <figcaption>
@@ -230,10 +230,10 @@
 <!--/grids 两张美妆特效图-->
 <div class="agile_last_double_sectionw3ls">
 	<div class="col-md-6 multi-gd-img multi-gd-text ">
-		<a href="body.jsp"><img src="images/bot_1.jpg" alt=" "> <!--<h4>Flat <span>50%</span> offer</h4>--></a>
+		<a href="#"><img src="images/bot_1.jpg" alt=" "> <!--<h4>Flat <span>50%</span> offer</h4>--></a>
 	</div>
 	<div class="col-md-6 multi-gd-img multi-gd-text ">
-		<a href="body.jsp"><img src="images/bot_2.jpg" alt=" "> <!--<h4>Flat <span>50%</span> offer</h4>--></a>
+		<a href="#"><img src="images/bot_2.jpg" alt=" "> <!--<h4>Flat <span>50%</span> offer</h4>--></a>
 	</div>
 	<div class="clearfix"></div>
 </div>
@@ -262,7 +262,8 @@
 									src="${rouge.picture}" alt="" class="pro-image-back">
 								<div class="men-cart-pro">
 									<div class="inner-men-cart-pro">
-										<a href="single.jsp" class="link-product-add-cart">快速 查看</a>
+									<!-- RougeServlet?method=showOneRouge&id=${rouge.rId} -->
+										<a href="GoodServlet?method=showOneGood&id=${rouge.rId}" class="link-product-add-cart">快速 查看</a>
 									</div>
 								</div>
 								<span class="product-new-top">New</span>
@@ -270,7 +271,7 @@
 							</div>
 							<div class="item-info-product ">
 								<h4>
-									<a href="single.jsp">${rouge.styleName}</a>
+									<a href="GoodServlet?method=showOneGood&id=${rouge.rId}">${rouge.styleName}</a>
 								</h4>
 								<div class="info-product-price">
 									<span class="item_price">￥${rouge.price}</span>
@@ -313,7 +314,7 @@
 									src="${skin.picture}" alt="" class="pro-image-back">
 								<div class="men-cart-pro">
 									<div class="inner-men-cart-pro">
-										<a href="single.jsp" class="link-product-add-cart">快速 查看</a>
+										<a href="GoodServlet?method=showOneGood&id=${skin.sId}" class="link-product-add-cart">快速 查看</a>
 									</div>
 								</div>
 								<span class="product-new-top">New</span>
@@ -321,7 +322,7 @@
 							</div>
 							<div class="item-info-product ">
 								<h4>
-									<a href="single.jsp">${skin.styleName}</a>
+									<a href="GoodServlet?method=showOneGood&id=${skin.sId}">${skin.styleName}</a>
 								</h4>
 								<div class="info-product-price">
 									<span class="item_price">￥${skin.price}</span>
@@ -367,7 +368,7 @@
 								<div class="men-cart-pro">
 									<div class="inner-men-cart-pro">
 										<a
-											href="PerfumeServlet?method=showOnePerfume&id=${perfume.pId}"
+											href="GoodServlet?method=showOneGood&id=${perfume.pId}"
 											class="link-product-add-cart">快速 查看</a>
 									</div>
 								</div>
@@ -376,7 +377,7 @@
 							</div>
 							<div class="item-info-product ">
 								<h4>
-									<a href="xiang.jsp">${perfume.styleName}</a>
+									<a href="GoodServlet?method=showOneGood&id=${perfume.pId}">${perfume.styleName}</a>
 								</h4>
 								<div class="info-product-price">
 									<span class="item_price">￥${perfume.price}</span>
@@ -474,7 +475,7 @@
 <!-- footer -->
 <div class="footer">
 	<div class="footer_agile_inner_info_w3l">
-		<p class="copy-right">&copy 2017 维密天使。版权所有施余缘,何晨昊,蔡应时,陈浩,辛壮壮</p>
+		<p class="copy-right">&copy 2017 维密天使。版权所有施余缘,蔡应时,陈浩,辛壮壮</p>
 	</div>
 </div>
 <!-- //footer -->

@@ -157,15 +157,15 @@
 							<img src="${skin.picture}" alt="" class="pro-image-back">
 							<div class="men-cart-pro">
 								<div class="inner-men-cart-pro">
-									<a href="single.jsp" class="link-product-add-cart">快速 查看</a>
+									<a href="GoodServlet?method=showOneGood&id=${skin.sId}" class="link-product-add-cart">快速 查看</a>
 								</div>
 							</div>
-							<span class="product-new-top">New</span>
+							<!-- <span class="product-new-top">New</span> -->
 
 						</div>
 						<div class="item-info-product ">
 							<h4>
-								<a href="single.jsp">${skin.styleName}</a>
+								<a href="GoodServlet?method=showOneGood&id=${skin.sId}">${skin.styleName}</a>
 							</h4>
 							<div class="info-product-price">
 								<span class="item_price">￥${skin.price}</span>

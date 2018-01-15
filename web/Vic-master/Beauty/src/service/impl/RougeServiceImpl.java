@@ -38,4 +38,18 @@ public class RougeServiceImpl implements RougeService{
 		return rdi.getOneRouge(rouge);
 	}
 
+	/**
+	 * 找指定id
+	 */
+	@Override
+	public boolean findRougeById(int rId) {
+		Rouge rougeById = rdi.getRougeById(rId);
+		return rougeById!=null;//不等于null,表示数据库中有这个id
+	}
+
+	@Override
+	public Rouge findRById(int rId) {
+		return rdi.getRougeById(rId);
+	}
+
 }

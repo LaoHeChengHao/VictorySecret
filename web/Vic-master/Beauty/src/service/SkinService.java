@@ -2,6 +2,7 @@ package service;
 
 import java.util.List;
 
+import entity.Rouge;
 import entity.Skin;
 
 /**
@@ -19,4 +20,10 @@ public interface SkinService {
 	
 	//显示单个护肤品信息
 	Skin showOneSkin(Skin skin);
+	
+	//查找数据库中是否包含指定id的商品
+	boolean findSkinById(int sId);
+	
+	//查找出指定id的商品
+	Skin findSById(int sId);
 }
