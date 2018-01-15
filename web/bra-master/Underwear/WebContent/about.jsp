@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -28,39 +29,49 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 <!-- header -->
-		
-			<div class="header-bot_inner_wthreeinfo_header_mid" id="home">
-				
-				<!--搜索框-->
-				<div class="col-md-4 header-middle">
-			    <form action="#" method="post">
-					<!--<input type="search" name="search" placeholder="搜索...." required="">
-					<input type="submit" value=" "><img src="images/search.png" />-->
-			    </form>
-		       </div>
-		       <!--logo-->
-				<div class="logo_pic">
-					<a href="#" ><img src="images/log-vs.png"/></a>
+<!--<div class="header" id="home">-->
+<!-- header-bot 最顶端:搜索框+logo+登录+注册+购物车 -->
+	<div class="header-bot" id="home">
+		<div class="header-bot_inner_wthreeinfo_header_mid">
+			<div class="show">
+				<div class="show-show">
+					<a href="index.jsp"><span>2018</span>维密鉴赏大会</a>
 				</div>
-				<!--登录+注册+购物车-->
-				<div class="login_resiger">
-					<div class="login">
-						<a href="#" data-toggle="modal"  >登录</a>
-					</div>
-					<div class="resiger">
-						<a href="#" data-toggle="modal" >注册</a>
-					</div>
-					<div class="car">
-						<a href="#" class="fa fa-phone" aria-hidden="true">购物车</a>
-					</div>
-				</div>
-				<div class="clearfix"></div>
 			</div>
-	<div class="container">
-
-		<div class="clearfix"></div>
+			<!--logo-->
+			<div class="logo_pic">
+				<a href="index.jsp"><img src="images/log-vs.png" align="center" /></a>
+			</div>
+			<!--登录+注册+购物车-->
+			<div class="login_resiger">
+			<!-- 当用户为空时，显示登录注册 
+			   注意：该login由Servlet转发给JSP页面的
+			-->
+			<c:if test="${empty login}">
+				<div class="login">
+					<a href="login.jsp"  > 登录</a>
+				</div>
+				<div class="resiger">
+					<a href="register.jsp"  > 注册</a>
+				</div>
+			</c:if>
+			
+				<div class="car">
+					<a href="#" class="fa fa-phone" aria-hidden="true"> 购物车</a>
+				</div>
+			</div>
+			<div class="clearfix">
+			<!-- 当用户不为空时，显示用户名和注销 -->
+			<c:if test="${!empty login}">
+			   <div style="float: right;margin-top: 30px">
+			   	 当前用户:&nbsp;${login.userName}
+			  |<a href="UsersServlet?method=lognOut"> &nbsp;注销</a>
+			   </div>
+			</c:if>
+			
+			</div>
+		</div>
 	</div>
-</div>
 <!-- //header-bot -->
 <!-- banner -->
 <div class="ban-top">
@@ -80,18 +91,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav menu__list">
-					<li class="active menu__item"><a class="menu__link" href="underwear.jsp">Underwear<span class="sr-only">(current)</span></a></li>
+					<li class="active menu__item"><a class="menu__link" href="underwear.jsp">首页<span class="sr-only">(current)</span></a></li>
 					<li class=" menu__item menu__item--current"><a class="menu__link" href="#">品牌信息</a></li>
 					<li class="dropdown menu__item">
 						<a href="bra.jsp" class="dropdown-toggle menu__link" >文胸 </a>
 					</li>
 					<li class="menu__item dropdown">
-					   <a class="menu__link" href="briefs.jsp" class="dropdown-toggle" data-toggle="dropdown">内裤</a>
+					   <a class="menu__link" href=" briefs.jsp" >内裤</a>
 					  
 					</li>
 					
-					<li class=" menu__item"><a class="menu__link" href="#">运动馆 </a></li>
-					<li class=" menu__item"><a class="menu__link" href="#">美妆馆 </a></li>
+					<li class=" menu__item"><a class="menu__link" href="contact.html">运动馆 </a></li>
+					<li class=" menu__item"><a class="menu__link" href="contact.html">美妆馆 </a></li>
 				  </ul>
 				</div>
 			  </div>
@@ -225,7 +236,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="agile_inner_breadcrumb">
 
 						   <ul class="w3_short">
-								<li><a href="underwear.html">首页</a></li>
+								<li><a href="underwear.jsp">首页</a></li>
 								<!--<li>品牌信息</li>-->
 							</ul>
 						 </div>
@@ -250,7 +261,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="banner_bottom_agile_info_inner_w3ls">
     	           <div class="col-md-6 wthree_banner_bottom_grid_three_left1 grid">
 						<figure class="effect-roxy">
-							<img src="bra/images/9de5f6c3cb64fa69c437781824e5cfd2.jpg" alt=" " class="img-responsive" />
+							<img src="images/9de5f6c3cb64fa69c437781824e5cfd2.jpg" alt=" " class="img-responsive" />
 							<figcaption>
 								<!--<h3><span>维密</span>天使</h3>-->
 								<p>维密天使</p>

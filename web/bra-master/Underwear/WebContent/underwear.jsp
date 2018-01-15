@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,39 +25,49 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 <!-- header -->
 <!--<div class="header" id="home">-->
-	
-	<!-- header-bot 最顶端:搜索框+logo+登录+注册+购物车 -->
-		<!--<div class="header-bot">-->			
-			<div class="header-bot_inner_wthreeinfo_header_mid" id="home">
-				
-				<!--搜索框-->
-				<div class="col-md-4 header-middle">
-			    <form action="#" method="post">
-					<!--<input type="search" name="search" placeholder="搜索...." required="">
-					<input type="submit" value=" "><img src="images/search.png" />-->
-			    </form>
-		       </div>
-		       <!--logo-->
-				<div class="logo_pic">
-					<a href="#" ><img src="images/log-vs.png"/></a>
+<!-- header-bot 最顶端:搜索框+logo+登录+注册+购物车 -->
+	<div class="header-bot" id="home">
+		<div class="header-bot_inner_wthreeinfo_header_mid">
+			<div class="show">
+				<div class="show-show">
+					<a href="index.jsp"><span>2018</span>维密鉴赏大会</a>
 				</div>
-				<!--登录+注册+购物车-->
-				<div class="login_resiger">
-					<div class="login">
-						<a href="#" data-toggle="modal" data-target="#myModal" >登录</a>
-					</div>
-					<div class="resiger">
-						<a href="#" data-toggle="modal" data-target="#myModal2">注册</a>
-					</div>
-					<div class="car">
-						<a href="#" class="fa fa-phone" aria-hidden="true">购物车</a>
-					</div>
-				</div>
-				<div class="clearfix"></div>
 			</div>
-		<!--</div>-->
-		<!-- //header-bot -->
-
+			<!--logo-->
+			<div class="logo_pic">
+				<a href="index.jsp"><img src="images/log-vs.png" align="center" /></a>
+			</div>
+			<!--登录+注册+购物车-->
+			<div class="login_resiger">
+			<!-- 当用户为空时，显示登录注册 
+			   注意：该login由Servlet转发给JSP页面的
+			-->
+			<c:if test="${empty login}">
+				<div class="login">
+					<a href="login.jsp"  > 登录</a>
+				</div>
+				<div class="resiger">
+					<a href="register.jsp"  > 注册</a>
+				</div>
+			</c:if>
+			
+				<div class="car">
+					<a href="#" class="fa fa-phone" aria-hidden="true"> 购物车</a>
+				</div>
+			</div>
+			<div class="clearfix">
+			<!-- 当用户不为空时，显示用户名和注销 -->
+			<c:if test="${!empty login}">
+			   <div style="float: right;margin-top: 30px">
+			   	 当前用户:&nbsp;${login.userName}
+			  |<a href="UsersServlet?method=lognOut"> &nbsp;注销</a>
+			   </div>
+			</c:if>
+			
+			</div>
+		</div>
+	</div>
+	<!-- //header-bot -->
 <!--</div>-->
 <!-- //header -->
 <!-- header-bot -->
@@ -99,58 +110,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!-- //header-bot -->
 <!-- banner -->
-<div class="ban-top">
-	<div class="container">
-		<div class="top_nav_left">
-			<nav class="navbar navbar-default">
-			  <div class="container-fluid">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span><!--切换导航-->
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				  </button>
+<!-- banner 导航分类栏-->
+	<div class="ban-top">
+		<div class="container">
+			<div class="top_nav_left" align="left">
+				<nav class="navbar navbar-default"> <!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse menu--shylock"
+					id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav menu__list">
+						<li class="active menu__item menu__item--current"><a
+							class="menu__link" href="#">首页 <span class="sr-only">(current)</span></a>
+						</li>
+						<li class=" menu__item "><a class="menu__link"
+							href="about.jsp">品牌信息</a></li>
+
+						<!--文胸  -->
+						<li class="dropdown menu__item"><a href="bra.jsp"
+							 class="dropdown-toggle menu__link"  
+							 aria-haspopup="true" aria-expanded="false">文胸</a>
+			           </li>
+
+						<!--内裤  -->
+						<li class="dropdown menu__item"><a href="briefs.jsp"
+							class="dropdown-toggle menu__link" 
+							aria-haspopup="true" aria-expanded="false">内裤
+						</a>
+						</li>
+
+						<!-- 链接到另外两个门店 -->
+						<li class=" menu__item"><a class="menu__link"
+							href="#" style="color:red;">内衣馆 </a></li>
+						<li class=" menu__item"><a class="menu__link"
+							href="#" style="color:red;">运动馆 </a></li>
+					</ul>
 				</div>
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
-				  <ul class="nav navbar-nav menu__list">
-					<li class="active menu__item menu__item--current"><a class="menu__link" href="#">Underwear<span class="sr-only">(current)</span></a></li>
-					<li class=" menu__item"><a class="menu__link" href="about.jsp">品牌信息</a></li>
-					<!--<li class="dropdown menu__item">
-						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
-							
-					</li>-->
-					<!--<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">内衣 <span class="caret"></span></a>-->
-							
-					<li class="dropdown menu__item">
-						<a href="bra.jsp" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">文胸</a>
-							
-					</li>
-					<li class="dropdown menu__item">
-						<a href="briefs.jsp" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">内裤</a>
-							
-					</li>
-					<li class="menu__item dropdown">
-					   <a class="menu__link" href="#" class="dropdown-toggle" >运动馆</a>
-					</li>
-					<li class=" menu__item"><a class="menu__link" href="#">美妆馆</a></li>
-				  </ul>
-				</div>
-			  </div>
-			</nav>	
+			</div>
+			</nav>
 		</div>
-		<!--<div class="top_nav_right">
-			<div class="wthreecartaits wthreecartaits2 cart cart box_1"> 
-						<form action="#" method="post" class="last"> 
-						<input type="hidden" name="cmd" value="_cart">
-						<input type="hidden" name="display" value="1">
-						<button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
-					</form>  
-  
-						</div>
-		</div>-->
 	<div class="clearfix"></div>
 	</div>
 </div>
@@ -455,7 +451,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- /new_arrivals --> 
 	<div class="new_arrivals_agile_w3ls_info"> 
 		<div class="container">
-		    <h3 class="wthree_text_info">新品<span>上市</span></h3>		
+		    <h3 class="wthree_text_info">限量<span>销售</span></h3>		
 				<!--<div id="horizontalTab">
 						<ul class="resp-tabs-list">
 							<li> Men's</li>
@@ -625,8 +621,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="col-md-3 product-men">
 								<div class="men-pro-item simpleCart_shelfItem">
 									<div class="men-thumb-item">
-										<img src="images/5A.jpg" alt="" class="pro-image-front">
-										<img src="images/5A.jpg" alt="" class="pro-image-back">
+										<img src="images/bv4.jpg" alt="" class="pro-image-front">
+										<img src="images/bv4.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
 													<a href="#" class="link-product-add-cart">快速查看</a>
@@ -664,8 +660,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="col-md-3 product-men">
 								<div class="men-pro-item simpleCart_shelfItem">
 									<div class="men-thumb-item">
-										<img src="images/6A.jpg" alt="" class="pro-image-front">
-										<img src="images/6A.jpg" alt="" class="pro-image-back">
+										<img src="images/bv5.jpg" alt="" class="pro-image-front">
+										<img src="images/bv5.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
 													<a href="#" class="link-product-add-cart">快速查看</a>
@@ -703,8 +699,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="col-md-3 product-men">
 								<div class="men-pro-item simpleCart_shelfItem">
 									<div class="men-thumb-item">
-										<img src="images/7A.jpg" class="pro-image-front">
-										<img src="images/7A.jpg" alt="" class="pro-image-back">
+										<img src="images/bv6.jpg" class="pro-image-front">
+										<img src="images/bv6.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
 													<a href="#" class="link-product-add-cart">快速查看</a>
@@ -744,8 +740,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="col-md-3 product-men">
 								<div class="men-pro-item simpleCart_shelfItem">
 									<div class="men-thumb-item">
-										<img src="images/8A.jpg" alt="" class="pro-image-front">
-										<img src="images/8A.jpg" alt="" class="pro-image-back">
+										<img src="images/bv7.jpg" alt="" class="pro-image-front">
+										<img src="images/bv7.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
 													<a href="#" class="link-product-add-cart">快速查看</a>

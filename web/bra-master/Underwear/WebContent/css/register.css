@@ -1,0 +1,32 @@
+@CHARSET "UTF-8";
+*{
+	margin: 0;
+	padding: 0;
+}
+/* 设置背景 */
+body{
+	background: url(../images/bg.jpg) no-repeat;
+	font-family: 'Montserrat', sans-serif;
+	background-size: 100% 600%;
+}
+/* 设置表单框 */
+.form-context{
+	border:1px,gray,thin;
+	margin: 0 auto;
+	width:500px;
+	height:450px;
+	vertical-align: middle;
+}
+#headFont span{
+	margin: 0 auto;
+	align:center;
+	vertical-align: middle;
+}
+.btn-register{
+	width: 100%;
+	height: 54px;
+	color: #fff;
+    background: #e22;
+    border: 0;
+    font-size: 16px;
+}

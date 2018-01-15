@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,36 +27,48 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--<div class="header" id="home">-->
 	
 	<!-- header-bot 最顶端:搜索框+logo+登录+注册+购物车 -->
-		<!--<div class="header-bot">-->			
-			<div class="header-bot_inner_wthreeinfo_header_mid" id="home">
-				
-				<!--搜索框-->
-				<div class="col-md-4 header-middle">
-			    <form action="#" method="post">
-					<!--<input type="search" name="search" placeholder="搜索...." required="">
-					<input type="submit" value=" "><img src="images/search.png" />-->
-			    </form>
-		       </div>
-		       <!--logo-->
-				<div class="logo_pic">
-					<a href="#" ><img src="images/log-vs.png"/></a>
+	<div class="header-bot" id="home">
+		<div class="header-bot_inner_wthreeinfo_header_mid">
+			<div class="show">
+				<div class="show-show">
+					<a href="index.jsp"><span>2018</span>维密鉴赏大会</a>
 				</div>
-				<!--登录+注册+购物车-->
-				<div class="login_resiger">
-					<div class="login">
-						<a href="#" data-toggle="modal" data-target="#myModal" >登录</a>
-					</div>
-					<div class="resiger">
-						<a href="#" data-toggle="modal" data-target="#myModal2">注册</a>
-					</div>
-					<div class="car">
-						<a href="#" class="fa fa-phone" aria-hidden="true">购物车</a>
-					</div>
-				</div>
-				<div class="clearfix"></div>
 			</div>
-		<!--</div>-->
-		<!-- //header-bot -->
+			<!--logo-->
+			<div class="logo_pic">
+				<a href="index.jsp"><img src="images/log-vs.png" align="center" /></a>
+			</div>
+			<!--登录+注册+购物车-->
+			<div class="login_resiger">
+			<!-- 当用户为空时，显示登录注册 
+			   注意：该login由Servlet转发给JSP页面的
+			-->
+			<c:if test="${empty login}">
+				<div class="login">
+					<a href="login.jsp"  > 登录</a>
+				</div>
+				<div class="resiger">
+					<a href="register.jsp"  > 注册</a>
+				</div>
+			</c:if>
+			
+				<div class="car">
+					<a href="#" class="fa fa-phone" aria-hidden="true"> 购物车</a>
+				</div>
+			</div>
+			<div class="clearfix">
+			<!-- 当用户不为空时，显示用户名和注销 -->
+			<c:if test="${!empty login}">
+			   <div style="float: right;margin-top: 30px">
+			   	 当前用户:&nbsp;${login.userName}
+			  |<a href="UsersServlet?method=lognOut"> &nbsp;注销</a>
+			   </div>
+			</c:if>
+			
+			</div>
+		</div>
+	</div>
+	<!-- //header-bot -->
 
 <!--</div>-->
 <!-- //header -->
@@ -99,47 +112,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!-- //header-bot -->
 <!-- banner -->
-<div class="ban-top">
-	<div class="container">
-		<div class="top_nav_left">
-			<nav class="navbar navbar-default">
-			  <div class="container-fluid">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span><!--切换导航-->
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				  </button>
+<!-- banner 导航分类栏-->
+	<div class="ban-top">
+		<div class="container">
+			<div class="top_nav_left" align="left">
+				<nav class="navbar navbar-default"> <!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse menu--shylock"
+					id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav menu__list">
+						<li class="active menu__item "><a
+							class="menu__link" href="underwear.jsp">首页 <span class="sr-only">(current)</span></a>
+						</li>
+						<li class=" menu__item "><a class="menu__link"
+							href="about.jsp">品牌信息</a></li>
+
+						<!--文胸  -->
+						<li class="dropdown menu__item"><a href="bra.jsp"
+							 class="dropdown-toggle menu__link"  
+							 aria-haspopup="true" aria-expanded="false">文胸</a>
+			           </li>
+
+						<!--内裤  -->
+						<li class="dropdown menu__item menu__item--current"><a href="#"
+							class="dropdown-toggle menu__link" 
+							 aria-haspopup="true" aria-expanded="false">内裤
+						</a>
+						</li>
+
+						<!-- 链接到另外两个门店 -->
+						<li class=" menu__item"><a class="menu__link"
+							href="#" style="color:red;">内衣馆 </a></li>
+						<li class=" menu__item"><a class="menu__link"
+							href="#" style="color:red;">运动馆 </a></li>
+					</ul>
 				</div>
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
-				  <ul class="nav navbar-nav menu__list">
-					<li class="active menu__item "><a class="menu__link" href="underwear.jsp">Underwear<span class="sr-only">(current)</span></a></li>
-					<li class=" menu__item"><a class="menu__link" href="about.jsp">品牌信息</a></li>
-					<!--<li class="dropdown menu__item">
-						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
-							
-					</li>-->
-					<!--<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">内衣 <span class="caret"></span></a>-->
-							
-					<li class="dropdown menu__item">
-						<a href="bra.jsp" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">文胸</a>
-							
-					</li>
-					<li class="menu__item dropdown">
-					   <a class="menu__link menu__item--current" href="#" class="dropdown-toggle" data-toggle="dropdown">内裤</a>
-					  
-					</li>
-					<li class="menu__item dropdown">
-					   <a class="menu__link" href="#" class="dropdown-toggle" >运动馆</a>
-					</li>
-					<li class=" menu__item"><a class="menu__link" href="#">美妆馆</a></li>
-				  </ul>
-				</div>
-			  </div>
-			</nav>	
+			</div>
+			</nav>
 		</div>
 		<!--<div class="top_nav_right">
 			<div class="wthreecartaits wthreecartaits2 cart cart box_1"> 
@@ -345,21 +353,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="new_arrivals_agile_w3ls_info"> 
 		<div class="container">
 		    <h3 class="wthree_text_info">新品<span>上市</span></h3>		
-				<!--<div id="horizontalTab">
-						<ul class="resp-tabs-list">
-							<li> Men's</li>
-							<li> Women's</li>
-							<li> Bags</li>
-							<li> Footwear</li>
-						</ul>
-					<div class="resp-tabs-container">-->
 					<!--/tab_one-->
 						<div class="tab1">
 							<div class="col-md-3 product-men">
 								<div class="men-pro-item simpleCart_shelfItem">
 									<div class="men-thumb-item">
-										<img src="images/内裤1A.jpg" alt="" class="pro-image-front">
-										<img src="images/内裤1A.jpg" alt="" class="pro-image-back">
+										<img src="images/bf1A.jpg" alt="" class="pro-image-front">
+										<img src="images/bf1A.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
 													<a href="#" class="link-product-add-cart">快速查看</a>
@@ -369,10 +369,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="#">内衣展示</a></h4>
+										<h4><a href="#">花漾蕾丝饰边半包臀内裤 CL 11006002</a></h4>
 										<div class="info-product-price">
-											<span class="item_price">￥368</span>
-											<del>￥600</del>
+											<span class="item_price">￥98.00</span>
+											<del>￥128.00</del>
 										</div>
 										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
 															<form action="#" method="post">
@@ -394,11 +394,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 								</div>
 							</div>
+							
 							<div class="col-md-3 product-men">
 								<div class="men-pro-item simpleCart_shelfItem">
 									<div class="men-thumb-item">
-										<img src="images/内裤2A.jpg" alt="" class="pro-image-front">
-										<img src="images/内裤2A.jpg" alt="" class="pro-image-back">
+										<img src="images/bf2A.jpg" alt="" class="pro-image-front">
+										<img src="images/bf2A.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
 													<a href="#" class="link-product-add-cart">快速查看</a>
@@ -408,10 +409,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="#">内衣展示</a></h4>
+										<h4><a href="#">蕾丝饰边低腰半包臀内裤 VS 11108641</a></h4>
 										<div class="info-product-price">
-											<span class="item_price">￥368</span>
-											<del>￥600</del>
+											<span class="item_price">￥138.00</span>
+											<del>￥158.00</del>
 										</div>
 										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
 															<form action="#" method="post">
@@ -433,11 +434,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 								</div>
 							</div>
+							
                             <div class="col-md-3 product-men">
 								<div class="men-pro-item simpleCart_shelfItem">
 									<div class="men-thumb-item">
-										<img src="images/内裤3A.jpg" alt="" class="pro-image-front">
-										<img src="images/内裤3A.jpg" alt="" class="pro-image-back">
+										<img src="images/bf3A.jpg" alt="" class="pro-image-front">
+										<img src="images/bf3A.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
 													<a href="#" class="link-product-add-cart">快速查看</a>
@@ -447,10 +449,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="#">内衣展示</a></h4>
+										<h4><a href="#">镂空半包臀内裤 11117717 秀场相似款</a></h4>
 										<div class="info-product-price">
-											<span class="item_price">￥368</span>
-											<del>￥600</del>
+											<span class="item_price">￥138.00</span>
+											<del>￥178.00</del>
 										</div>
 										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
 															<form action="#" method="post">
@@ -475,8 +477,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="col-md-3 product-men">
 								<div class="men-pro-item simpleCart_shelfItem">
 									<div class="men-thumb-item">
-										<img src="images/内裤4A.jpg" alt="" class="pro-image-front">
-										<img src="images/内裤4A.jpg" alt="" class="pro-image-back">
+										<img src="images/bf4A.jpg" alt="" class="pro-image-front">
+										<img src="images/bf4A.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
 													<a href="#" class="link-product-add-cart">快速查看</a>
@@ -486,10 +488,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="#">内衣展示</a></h4>
+										<h4><a href="#">蕾丝饰边V型细带丁字裤 CL 11093533</a></h4>
 										<div class="info-product-price">
-											<span class="item_price">￥368</span>
-											<del>￥600</del>
+											<span class="item_price">￥98.00</span>
+											<del>￥138.00</del>
 										</div>
 										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
 															<form action="#" method="post">
@@ -514,8 +516,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="col-md-3 product-men">
 								<div class="men-pro-item simpleCart_shelfItem">
 									<div class="men-thumb-item">
-										<img src="images/内裤5A.jpg" alt="" class="pro-image-front">
-										<img src="images/内裤5A.jpg" alt="" class="pro-image-back">
+										<img src="images/bf5A.jpg" alt="" class="pro-image-front">
+										<img src="images/bf5A.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
 													<a href="#" class="link-product-add-cart">快速查看</a>
@@ -525,10 +527,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="#">内衣展示</a></h4>
+										<h4><a href="#">蕾丝低腰丁字裤 网纱拼接 DA 11093724</a></h4>
 										<div class="info-product-price">
-											<span class="item_price">￥368</span>
-											<del>￥600</del>
+											<span class="item_price">￥138.00</span>
+											<del>￥158.00</del>
 										</div>
 										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
 															<form action="#" method="post">
@@ -553,8 +555,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="col-md-3 product-men">
 								<div class="men-pro-item simpleCart_shelfItem">
 									<div class="men-thumb-item">
-										<img src="images/内裤6A.jpg" alt="" class="pro-image-front">
-										<img src="images/内裤6A.jpg" alt="" class="pro-image-back">
+										<img src="images/bf6A.jpg" alt="" class="pro-image-front">
+										<img src="images/bf6A.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
 													<a href="#" class="link-product-add-cart">快速查看</a>
@@ -564,10 +566,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="#">内衣展示</a></h4>
+										<h4><a href="#">蕾丝波点网纱丁字裤 DA</br> 11108793</a></h4>
 										<div class="info-product-price">
-											<span class="item_price">￥368</span>
-											<del>￥600</del>
+											<span class="item_price">￥138.00</span>
+											<del>￥168.00</del>
 										</div>
 										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
 															<form action="#" method="post">
@@ -592,8 +594,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="col-md-3 product-men">
 								<div class="men-pro-item simpleCart_shelfItem">
 									<div class="men-thumb-item">
-										<img src="images/内裤7A.jpg" class="pro-image-front">
-										<img src="images/内裤7A.jpg" alt="" class="pro-image-back">
+										<img src="images/bf7A.jpg" class="pro-image-front">
+										<img src="images/bf7A.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
 													<a href="#" class="link-product-add-cart">快速查看</a>
@@ -603,10 +605,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="#">内衣展示</a></h4>
+										<h4><a href="#">无痕低腰丁字裤 SL</br>11086334</a></h4>
 										<div class="info-product-price">
-											<span class="item_price">￥368</span>
-											<del>￥600</del>
+											<span class="item_price">￥98.00</span>
+											<del>￥118.00</del>
 										</div>
 										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
 															<form action="#" method="post">
@@ -628,134 +630,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 								</div>
 							</div>
-					<!--			<div class="col-md-3 product-men">
-								<div class="men-pro-item simpleCart_shelfItem">
-									<div class="men-thumb-item">
-										<img src="images/3G.jpg" alt="" class="pro-image-front">
-										<img src="images/3G.jpg" alt="" class="pro-image-back">
-											<div class="men-cart-pro">
-												<div class="inner-men-cart-pro">
-													<a href="#" class="link-product-add-cart">快速查看</a>
-												</div>
-											</div>
-											<span class="product-new-top">New</span>
-											
-									</div>
-									<div class="item-info-product ">
-										<h4><a href="#">内衣展示</a></h4>
-										<div class="info-product-price">
-											<span class="item_price">￥368</span>
-											<del>￥600</del>
-										</div>
-										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-															<form action="#" method="post">
-																<fieldset>
-																	<input type="hidden" name="cmd" value="_cart" />
-																	<input type="hidden" name="add" value="1" />
-																	<input type="hidden" name="business" value=" " />
-																	<input type="hidden" name="item_name" value="Formal Blue Shirt" />
-																	<input type="hidden" name="amount" value="30.99" />
-																	<input type="hidden" name="discount_amount" value="1.00" />
-																	<input type="hidden" name="currency_code" value="USD" />
-																	<input type="hidden" name="return" value=" " />
-																	<input type="hidden" name="cancel_return" value=" " />
-																	<input type="submit" name="submit" value="加入到购物车" class="button" />
-																</fieldset>
-															</form>
-														</div>
-																			
-									</div>
-								</div>
-							</div>
-							<div class="clearfix"></div>
-						</div>-->
-						<!--//tab_one-->
-						<!--/tab_two-->
-				<!--		<div class="tab2">
-							 <div class="col-md-3 product-men">
-								<div class="men-pro-item simpleCart_shelfItem">
-									<div class="men-thumb-item">
-										<img src="images/4B.jpg" alt="" class="pro-image-front">
-										<img src="images/4B.jpg" alt="" class="pro-image-back">
-											<div class="men-cart-pro">
-												<div class="inner-men-cart-pro">
-													<a href="#" class="link-product-add-cart">快速查看</a>
-												</div>
-											</div>
-											<span class="product-new-top">New</span>
-											
-									</div>
-									<div class="item-info-product ">
-										<h4><a href="#">内衣展示</a></h4>
-										<div class="info-product-price">
-											<span class="item_price">￥368</span>
-											<del>￥600</del>
-										</div>
-										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-															<form action="#" method="post">
-																<fieldset>
-																	<input type="hidden" name="cmd" value="_cart" />
-																	<input type="hidden" name="add" value="1" />
-																	<input type="hidden" name="business" value=" " />
-																	<input type="hidden" name="item_name" value="Formal Blue Shirt" />
-																	<input type="hidden" name="amount" value="30.99" />
-																	<input type="hidden" name="discount_amount" value="1.00" />
-																	<input type="hidden" name="currency_code" value="USD" />
-																	<input type="hidden" name="return" value=" " />
-																	<input type="hidden" name="cancel_return" value=" " />
-																	<input type="submit" name="submit" value="加入到购物车" class="button" />
-																</fieldset>
-															</form>
-														</div>
-																			
-									</div>
-								</div>
-							</div>-->
-							<!--<div class="col-md-3 product-men">
-								<div class="men-pro-item simpleCart_shelfItem">
-									<div class="men-thumb-item">
-										<img src="images/5B.jpg" alt="" class="pro-image-front">
-										<img src="images/5B.jpg" alt="" class="pro-image-back">
-											<div class="men-cart-pro">
-												<div class="inner-men-cart-pro">
-													<a href="#" class="link-product-add-cart">快速查看</a>
-												</div>
-											</div>
-											<span class="product-new-top">New</span>
-											
-									</div>
-									<div class="item-info-product ">
-										<h4><a href="#">内衣展示</a></h4>
-										<div class="info-product-price">
-											<span class="item_price">￥368</span>
-											<del>￥600</del>
-										</div>
-										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-															<form action="#" method="post">
-																<fieldset>
-																	<input type="hidden" name="cmd" value="_cart" />
-																	<input type="hidden" name="add" value="1" />
-																	<input type="hidden" name="business" value=" " />
-																	<input type="hidden" name="item_name" value="Formal Blue Shirt" />
-																	<input type="hidden" name="amount" value="30.99" />
-																	<input type="hidden" name="discount_amount" value="1.00" />
-																	<input type="hidden" name="currency_code" value="USD" />
-																	<input type="hidden" name="return" value=" " />
-																	<input type="hidden" name="cancel_return" value=" " />
-																	<input type="submit" name="submit" value="加入到购物车" class="button" />
-																</fieldset>
-															</form>
-														</div>
-																			
-									</div>
-								</div>
-							</div>-->
-						
 							<div class="col-md-3 product-men">
 								<div class="men-pro-item simpleCart_shelfItem">
 									<div class="men-thumb-item">
-										<img src="images/内裤8A.jpg" alt="" class="pro-image-front">
-										<img src="images/内裤8A.jpg" alt="" class="pro-image-back">
+										<img src="images/bf8A.jpg" alt="" class="pro-image-front">
+										<img src="images/bf8A.jpg" alt="" class="pro-image-back">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
 													<a href="#" class="link-product-add-cart">快速查看</a>
@@ -765,10 +644,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											
 									</div>
 									<div class="item-info-product ">
-										<h4><a href="#">内衣展示</a></h4>
+										<h4><a href="#">一片式无痕低腰内裤 SS</br>11069840</a></h4>
 										<div class="info-product-price">
-											<span class="item_price">￥368</span>
-											<del>￥600</del>
+											<span class="item_price">￥98.00</span>
+											<del>￥128.00</del>
 										</div>
 										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
 															<form action="#" method="post">
@@ -790,17 +669,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 								</div>
 							</div>
-							
-							
-						    
-						    
-								
-					 
-							
-							
-							
-							
-								
 							<div class="clearfix"></div>
 						</div>
 					</div>
@@ -1046,21 +914,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 <!-- //js -->
 <script src="js/modernizr.custom.js"></script>
-	<!-- Custom-JavaScript-File-Links --> 
-	<!-- cart-js 购物车-->
-<!--	<script src="js/minicart.min.js"></script>
-<script>
-	// Mini Cart
-	paypal.minicart.render({
-		action: '#'
-	});
 
-	if (~window.location.search.indexOf('reset=true')) {
-		paypal.minicart.reset();
-	}
-</script>-->
-
-	<!-- //cart-js 购物车结束--> 
 <!-- script for responsive tabs -->						
 <script src="js/easy-responsive-tabs.js"></script>
 <script>
